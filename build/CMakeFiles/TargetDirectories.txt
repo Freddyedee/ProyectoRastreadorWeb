@@ -1,0 +1,3 @@
+C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles/myapp.dir
+C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles/edit_cache.dir
+C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles/rebuild_cache.dir

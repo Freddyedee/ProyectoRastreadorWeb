@@ -1,0 +1,20 @@
+[
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/pruebas.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp",
+  "output": "CMakeFiles/myapp.dir/pruebas.cpp.obj"
+},
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp",
+  "output": "CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj"
+},
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp",
+  "output": "CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj"
+}
+]
