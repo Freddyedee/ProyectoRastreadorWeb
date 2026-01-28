@@ -177,27 +177,26 @@ std::string ProcesadorEnlaces::normalizarURL(const std::string& url, const std::
     return base_url + urlSinEspacios;
 }; 
 
+    void ProcesadorEnlaces::setDominioBase(const std::string& dominio) {
+        dominioBase = extraerDominio(dominio);  // normalizamos
+    }
 
 bool ProcesadorEnlaces::esMismoDominio(const std::string& url) {
     std::string host = extraerDominio(url);
+
     if (host.empty()) return false;
 
-    std::string hostLower = host;
-    std::transform(hostLower.begin(), hostLower.end(), hostLower.begin(), ::tolower);
+    // dominioBase ya viene limpio (sin www., en minúsculas) porque lo seteamos con extraerDominio
+    std::string base = dominioBase;
+    if (base.empty()) return false;
 
-    std::string baseLower = dominioBase;
-    std::transform(baseLower.begin(), baseLower.end(), baseLower.begin(), ::tolower);
+    // Caso 1: exactamente igual
+    if (host == base) return true;
 
-    // Quitamos "www." del base si lo tiene (por seguridad)
-    if (baseLower.find("www.") == 0) {
-        baseLower = baseLower.substr(4);
-    }
-
-    if (hostLower == baseLower) return true;
-
-    std::string sufijo = "." + baseLower;
-    if (hostLower.size() > sufijo.size() &&
-        hostLower.compare(hostLower.size() - sufijo.size(), sufijo.size(), sufijo) == 0) {
+    // Caso 2: subdominio (termina con .base)
+    std::string sufijo = "." + base;
+    if (host.size() > sufijo.size() &&
+        host.compare(host.size() - sufijo.size(), sufijo.size(), sufijo) == 0) {
         return true;
     }
 
@@ -217,7 +216,6 @@ std::string ProcesadorEnlaces::extraerDominio(const std::string& url) {
 
     size_t inicio = url.find("://");
     if (inicio == std::string::npos) {
-        // Sin protocolo → asumimos que es solo dominio o path
         inicio = 0;
     } else {
         inicio += 3;  // Saltamos ://
@@ -230,13 +228,18 @@ std::string ProcesadorEnlaces::extraerDominio(const std::string& url) {
 
     std::string dominio = url.substr(inicio, fin - inicio);
 
-    // Quitamos puerto si existe (ej: :8080)
+    // Quitamos puerto si existe (:8080)
     size_t puerto = dominio.find(':');
     if (puerto != std::string::npos) {
         dominio = dominio.substr(0, puerto);
     }
 
-    // Convertimos a minúsculas
+    // Quitamos "www." al inicio si existe
+    if (dominio.size() > 4 && dominio.substr(0, 4) == "www.") {
+        dominio = dominio.substr(4);
+    }
+
+    // Todo a minúsculas
     std::transform(dominio.begin(), dominio.end(), dominio.begin(), ::tolower);
 
     return dominio;

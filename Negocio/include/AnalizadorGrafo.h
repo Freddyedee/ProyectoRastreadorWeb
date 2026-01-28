@@ -17,21 +17,28 @@ private:
     const std::unordered_map<std::string, std::vector<std::string>>& grafo;
     ProcesadorEnlaces procesador;
 
+    // Calcula total de páginas y grado promedio
+    std::pair<int, double> calcularTotalPaginasYGradoPromedio() const;
+
+    // Calcula y devuelve el conjunto de subdominios únicos
+    std::unordered_set<std::string> calcularSubdominiosUnicos();
+
+    // Calcula la profundidad máxima usando BFS
+    int calcularProfundidadMaxima(const std::string& paginaInicial) const;
+
+    // Muestra todas las métricas formateadas
+    void mostrarMetricas(int totalPaginas, double gradoPromedio,
+                         int profundidadMaxima, size_t numSubdominios,
+                         int diametroAproximado) const;
+
 public:
     explicit AnalizadorGrafo(
         const std::unordered_map<std::string, std::vector<std::string>>& g,
         const std::string& dominioBase = "")
         : grafo(g), procesador(dominioBase) {}
 
-    // Imprime el camino de forma limpia y legible
-    void imprimirCamino(const std::vector<std::string>& camino) const;
 
-    std::vector<std::string> buscarCaminoConPalabraClave(
-    const std::string& paginaInicial,
-    const std::string& palabraClave);
-
-    void calcularMetricas(const std::string& start);
-    // Puedes agregar más: shortestPath entre dos nodos, degree centrality, etc.
+    void calcularMetricas(const std::string& paginaInicial);
 };
 
 #endif

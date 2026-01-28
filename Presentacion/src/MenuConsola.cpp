@@ -13,7 +13,7 @@ void MenuConsola::ejecutar(){
 
     int opcion = 0;
 
-   do {
+    do {
         std::cout << "\n=== MENU DE PRUEBAS DEL WEB CRAWLER ===\n";
         std::cout << "1. Probar descarga de pagina\n";
         std::cout << "2. Probar extraccion de enlaces\n";
@@ -109,6 +109,8 @@ void MenuConsola::probarMismoDominio() {
 
     std::cout << "Ingrese URL inicial (para obtener el dominio base): ";
     std::cin >> urlInicial;
+    
+    procesadorEnlaces.setDominioBase(urlInicial);
 
     std::cout << "Ingrese URL a evaluar: ";
     std::cin >> urlEvaluar;

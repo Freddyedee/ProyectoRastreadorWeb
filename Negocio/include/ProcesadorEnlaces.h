@@ -14,6 +14,8 @@ class ProcesadorEnlaces {
 
         explicit ProcesadorEnlaces(const std::string& dominio); 
 
+        void setDominioBase(const std::string& dominio);
+
          /**
             @brief Extrae todos los enlaces a href desde el HTML de una página.
             @param html Código HTML de la página.
