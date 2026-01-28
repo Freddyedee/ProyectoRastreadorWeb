@@ -28,6 +28,8 @@ public:
 
     // Devuelve el grafo completo (solo lectura)
     const std::unordered_map<std::string, std::vector<std::string>>& obtenerGrafo() const;
+
+    void limpiar();
 };
 
 #endif // GRAFOWEB_H

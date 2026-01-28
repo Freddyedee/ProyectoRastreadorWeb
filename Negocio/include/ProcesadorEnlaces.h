@@ -3,6 +3,8 @@
 
 #include <string>
 #include <vector>
+#include <unordered_set>
+#include <algorithm>
 
 class ProcesadorEnlaces {
 
@@ -58,9 +60,6 @@ class ProcesadorEnlaces {
         std::string dominioBase;
 
         
-
-
-
 };
 
 

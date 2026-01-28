@@ -26,3 +26,7 @@ const std::unordered_map<std::string, std::vector<std::string>>&
 GrafoWeb::obtenerGrafo() const {
     return adyacencias;
 }
+
+void GrafoWeb::limpiar() {
+    adyacencias.clear();
+}

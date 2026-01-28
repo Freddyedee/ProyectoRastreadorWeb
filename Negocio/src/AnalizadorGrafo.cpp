@@ -1,5 +1,4 @@
 #include "../include/AnalizadorGrafo.h"
-#include "../include/WebCrawler.h"
 #include <iostream> 
 
 
@@ -79,7 +78,7 @@ void AnalizadorGrafo::calcularMetricas(const std::string& paginaInicial)
     for (const auto& [url, enlaces] : grafo) {
         sumaEnlaces += enlaces.size();                        // Sumamos todos los enlaces salientes
 
-        std::string dominio = extraerDominio(url);       
+        std::string dominio = procesador.extraerDominio(url);       
         size_t posicionPunto = dominio.find('.');
         if (posicionPunto != std::string::npos && dominio.substr(0, posicionPunto) != "www") {
             subdominiosUnicos.insert(dominio.substr(0, posicionPunto));

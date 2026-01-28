@@ -999,10 +999,10 @@
 				},
 				{
 					"name" : "HELPSTRING",
-					"value" : "Vcpkg toolchain file"
+					"value" : "The CMake toolchain file"
 				}
 			],
-			"type" : "STRING",
+			"type" : "FILEPATH",
 			"value" : "C:/Users/usuario/vcpkg/scripts/buildsystems/vcpkg.cmake"
 		},
 		{

@@ -4,13 +4,22 @@
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\pruebas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\WebCrawler.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\AnalizadorGrafo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Presentacion\src\MenuConsola.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\ComunicacionHTTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\GrafoWeb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\ProcesadorEnlaces.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\WebCrawler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

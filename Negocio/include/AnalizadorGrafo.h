@@ -8,16 +8,20 @@
 #include <unordered_set>     // Para guardar cosas unicas sin repetir (como lista sin duplicados)
 #include <vector>            // Para guardar listas de cosas (como array que crece solo)
 #include <algorithm>         // Para funciones utiles como transformar texto
+#include "../include/ProcesadorEnlaces.h"
 #define NOMINMAX  
 
 
 class AnalizadorGrafo {
 private:
     const std::unordered_map<std::string, std::vector<std::string>>& grafo;
+    ProcesadorEnlaces procesador;
 
 public:
-    explicit AnalizadorGrafo(const std::unordered_map<std::string, std::vector<std::string>>& g)
-        : grafo(g) {}
+    explicit AnalizadorGrafo(
+        const std::unordered_map<std::string, std::vector<std::string>>& g,
+        const std::string& dominioBase = "")
+        : grafo(g), procesador(dominioBase) {}
 
     // Imprime el camino de forma limpia y legible
     void imprimirCamino(const std::vector<std::string>& camino) const;
