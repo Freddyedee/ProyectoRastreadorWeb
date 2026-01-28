@@ -421,4 +421,5 @@ CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ProcesadorEnlaces.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/GrafoWeb.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ComunicacionHTTP.h \
- C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/WebCrawler.h
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/WebCrawler.h \
+ C:/msys64/mingw64/include/c++/15.2.0/limits
