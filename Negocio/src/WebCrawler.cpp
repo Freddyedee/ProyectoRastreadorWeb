@@ -15,10 +15,10 @@
  *       asociados a instancias de clase.
  */
 
-size_t WebCrawler::writeCallback(void* contenido, size_t tamañoBloque, size_t numeroBloques, std::string* userp) {
+size_t WebCrawler::writeCallback(void* contenido, size_t tamannoBloque, size_t numeroBloques, std::string* userp) {
     
     //Calculo explicito del tamaño total de los datos recibidos
-    size_t totalSize = tamañoBloque * numeroBloques;
+    size_t totalSize = tamannoBloque * numeroBloques;
 
     //conersion explicita del bloque generico de caracteres
     char* dataRecibida = static_cast<char*>(contenido);

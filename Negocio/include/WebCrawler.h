@@ -30,7 +30,7 @@ class WebCrawler {
         *       asociados a instancias de clase.
          * 
      */
-        static size_t writeCallback(void* contenido, size_t tamañoBloque, size_t numeroBloques, std::string* userp);  //funcion estatica para manejar la respuesta de curl
+        static size_t writeCallback(void* contenido, size_t tamannoBloque, size_t numeroBloques, std::string* userp);  //funcion estatica para manejar la respuesta de curl
 
 
         /**
