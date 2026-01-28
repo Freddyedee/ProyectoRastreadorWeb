@@ -1,6 +1,7 @@
 {
     "cmake.configureArgs": [
-        "-DVCPKG_TARGET_TRIPLET=-static"
+    "-DCMAKE_TOOLCHAIN_FILE=C:/Users/usuario/vcpkg/scripts/buildsystems/vcpkg.cmake",
+    "-DVCPKG_TARGET_TRIPLET=x64-windows"   // o x64-windows-static
     ],
     "vcpkg.target.useStaticLib": true,
     "vcpkg.target.defaultTriplet": "-static"

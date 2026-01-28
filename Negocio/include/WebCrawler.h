@@ -8,11 +8,20 @@
 #include <unordered_set> // para evitar URLs duplicadas y controlador las URLs visitadas  
 #include <queue> //principal herramienta para el algoritmo de BFS
 
+        /**
+     * @brief 
+     * Extrae el dominio principal de una url
+     * 
+     * @param url URL completa 
+     * @return std::string (Dominio extraído por ejemplo: "ejemplo.com")
+     */
+        std::string extraerDominio(const std::string& url);
+
 // Clase que implementa un rastreador web (web crawler) para explorar y analizar páginas web.
 class WebCrawler {
 
     public:  
-        std::string dominio; //aalmacena el dominio base del URL inicial 
+        std::string dominio; //almacena el dominio base del URL inicial 
         std::unordered_map<std::string, std::vector<std::string>> grafo; //Representacion del grafo de paginas web, donde std::string -> url y vector<string> -> urls enlazadas
 
         /**
@@ -21,7 +30,7 @@ class WebCrawler {
         * descargados desde una solicitud HTTP.
         *
         * @param datosRecibidos Puntero a los datos recibidos.
-        * @param tamañoBloque Tamaño de cada bloque de datos.
+        * @param tamanoBloque Tamaño de cada bloque de datos.
         * @param numeroBloques Número de bloques recibidos.
         * @param userp Puntero al string donde se almacenará el contenido.
         * @return Número total de bytes procesados.
@@ -30,7 +39,7 @@ class WebCrawler {
         *       asociados a instancias de clase.
          * 
      */
-        static size_t writeCallback(void* contenido, size_t tamañoBloque, size_t numeroBloques, std::string* userp);  //funcion estatica para manejar la respuesta de curl
+        static size_t writeCallback(void* contenido, size_t tamanoBloque, size_t numeroBloques, std::string* userp);  //funcion estatica para manejar la respuesta de curl
 
 
         /**
@@ -65,15 +74,6 @@ class WebCrawler {
     */
 
         bool esMismoDominio(const std::string& url);
-
-        /**
-     * @brief 
-     * Extrae el dominio principal de una url
-     * 
-     * @param url URL completa 
-     * @return std::string (Dominio extraído por ejemplo: "ejemplo.com")
-     */
-        std::string extraerDominio(const std::string& url);
 
         std::string normalizarURL(const std::string& url, const std::string& base_url);
 

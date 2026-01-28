@@ -1,6 +1,7 @@
 #include "../include/MenuConsola.h" 
 #include <iostream>
 
+
 void MenuConsola::ejecutar(){
 
     int opcion = 0; 
@@ -12,6 +13,8 @@ void MenuConsola::ejecutar(){
         std::cout << "3. Probar normalizacion de URL\n";
         std::cout << "4. Probar verificacion de dominio\n";
         std::cout << "5. Probar rastreo completo (BFS)\n";
+        std::cout << "6. Buscar camino a pagina con palabra clave\n";
+        std::cout << "7. Calcular metricas estructurales del sitio\n";
         std::cout << "0. Salir\n";
         std::cout << "Seleccione una opcion: ";
         std::cin >> opcion;
@@ -21,7 +24,9 @@ void MenuConsola::ejecutar(){
             case 2: probarExtraerEnlaces(); break;
             case 3: probarNormalizarUrl(); break;
             case 4: probarMismoDominio(); break;
-            //case 5: probarRastrear(); break;
+            case 5: probarRastrear(); break; //?
+            case 6: probarBuscarCaminoPalabraClave(); break;
+            case 7: probarCalcularMetricas(); break;
         }
 
     } while (opcion != 0);
@@ -35,17 +40,7 @@ void MenuConsola::probarDescargarPagina(){
     std::cout << "Ingrese url"; 
     std::cin >> url;
 
-    try{
-
-        std::string contenidoHtml = crawler.descargarPagina(url);
-        std::cout << "Contenido HTML descargado:\n" << std::endl; 
-        std::cout << "Tamaño del contenido: " << contenidoHtml.size() << " bytes\n";
-
-    } catch (const std::exception& e){
-
-        std::cerr << "Error al descargar la pagina: " << e.what() << std::endl; 
-
-    }
+    
 }
 
 void MenuConsola::probarExtraerEnlaces(){
@@ -113,8 +108,12 @@ void MenuConsola::probarMismoDominio(){
 }
 
 void MenuConsola::probarRastrear() {
+    
+
+
     std::string url;
     int profundidad, maxPaginas;
+
 
     std::cout << "URL inicial: ";
     std::cin >> url;
@@ -123,7 +122,23 @@ void MenuConsola::probarRastrear() {
     std::cout << "Maximo de paginas: ";
     std::cin >> maxPaginas;
 
+    try{
+
+        std::string contenidoHtml = crawler.descargarPagina(url);
+        std::cout << "Contenido HTML descargado:\n" << std::endl; 
+        std::cout << "Tamaño del contenido: " << contenidoHtml.size() << " bytes\n";
+
+    } catch (const std::exception& e){
+
+        std::cerr << "Error al descargar la pagina: " << e.what() << std::endl; 
+
+    }
+
     crawler.rastrear(url, profundidad, maxPaginas);
+
+    // Creamos el analizador con el grafo recién construido
+    delete analizador;  // Borramos si ya existía
+    analizador = new AnalizadorGrafo(crawler.getGrafo());   
 
     const auto& grafo = crawler.getGrafo();
 
@@ -135,4 +150,39 @@ void MenuConsola::probarRastrear() {
         }
         std::cout << "------------------------\n";
     }
+}
+
+void MenuConsola::probarBuscarCaminoPalabraClave() {
+    if (!analizador) {
+        std::cout << "Primero debes realizar un rastreo completo (opcion 5).\n";
+        return;
+    }
+
+    std::string paginaInicial;
+    std::string palabraClave;
+
+    std::cout << "Ingrese la pagina inicial (ej: https://www.uneg.edu.ve): ";
+    std::cin >> paginaInicial;
+
+    std::cout << "Ingrese la palabra clave a buscar en la URL: ";
+    std::cin >> palabraClave;
+
+    std::cout << "Buscando camino...\n";
+    auto camino = analizador->buscarCaminoConPalabraClave(paginaInicial, palabraClave);
+
+    analizador->imprimirCamino(camino);
+}
+
+void MenuConsola::probarCalcularMetricas() {
+    if (!analizador) {
+        std::cout << "Primero debes realizar un rastreo completo (opcion 5).\n";
+        return;
+    }
+
+    std::string paginaInicial;
+    std::cout << "Ingrese la pagina inicial para calcular metricas (ej: https://www.uneg.edu.ve): ";
+    std::cin >> paginaInicial;
+
+    std::cout << "Calculando metricas...\n";
+    analizador->calcularMetricas(paginaInicial);
 }
