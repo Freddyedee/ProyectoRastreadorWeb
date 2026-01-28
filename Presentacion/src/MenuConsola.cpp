@@ -1,4 +1,9 @@
 #include "../include/MenuConsola.h" 
+#include "../include/ProcesadorEnlaces.h"
+#include "../include/ComunicacionHTTP.h"
+#include "../include/GrafoWeb.h"
+#include "../include/WebCrawler.h"
+
 #include <iostream>
 
 void MenuConsola::ejecutar(){
@@ -31,13 +36,15 @@ void MenuConsola::ejecutar(){
 
 void MenuConsola::probarDescargarPagina(){
 
+   
+
     std::string url; 
     std::cout << "Ingrese url"; 
     std::cin >> url;
 
     try{
 
-        std::string contenidoHtml = crawler.descargarPagina(url);
+        std::string contenidoHtml = comunicacionHttp.descargarPagina(url);
         std::cout << "Contenido HTML descargado:\n" << std::endl; 
         std::cout << "Tamaño del contenido: " << contenidoHtml.size() << " bytes\n";
 
@@ -50,6 +57,8 @@ void MenuConsola::probarDescargarPagina(){
 
 void MenuConsola::probarExtraerEnlaces(){
 
+    
+     
     std::string url;
     std::string baseUrl; 
 
@@ -60,8 +69,8 @@ void MenuConsola::probarExtraerEnlaces(){
     std::cin >> baseUrl;
 
     try {
-        std::string html = crawler.descargarPagina(url);
-        std::vector<std::string> enlaces = crawler.extraerEnlaces(html, baseUrl);
+        std::string html = comunicacionHttp.descargarPagina(url);
+        std::vector<std::string> enlaces = procesadorEnlaces.extraerEnlaces(html, baseUrl);
 
         std::cout << "Enlaces extraidos:\n";
         for (const auto& enlace : enlaces) {
@@ -77,6 +86,7 @@ void MenuConsola::probarExtraerEnlaces(){
 
 void MenuConsola::probarNormalizarUrl(){
 
+
     std::string url;
     std::string baseUrl; 
     std::cout << "=====Este proceso convierte rutas cortas en direcciones completas.=====\n";
@@ -87,7 +97,7 @@ void MenuConsola::probarNormalizarUrl(){
     std::cin >> baseUrl;
 
     try {
-        std::string urlNormalizada = crawler.normalizarURL(url, baseUrl);
+        std::string urlNormalizada = procesadorEnlaces.normalizarURL(url, baseUrl);
         std::cout << "Direccion final generada: " << urlNormalizada << std::endl;
 
     } catch (const std::exception& e) {
@@ -96,7 +106,8 @@ void MenuConsola::probarNormalizarUrl(){
 }
 
 void MenuConsola::probarMismoDominio(){
- std::string urlInicial, urlEvaluar;
+    
+    std::string urlInicial, urlEvaluar;
 
     std::cout << "Ingrese URL inicial: ";
     std::cin >> urlInicial;
@@ -106,7 +117,7 @@ void MenuConsola::probarMismoDominio(){
     std::cout << "Ingrese URL a evaluar: ";
     std::cin >> urlEvaluar;
 
-    if (crawler.esMismoDominio(urlEvaluar))
+    if (procesadorEnlaces.esMismoDominio(urlEvaluar))
         std::cout << "Pertenece al mismo dominio\n";
     else
         std::cout << "NO pertenece al mismo dominio\n";
@@ -125,7 +136,7 @@ void MenuConsola::probarRastrear() {
 
     crawler.rastrear(url, profundidad, maxPaginas);
 
-    const auto& grafo = crawler.getGrafo();
+    const auto& grafo = grafoWeb.obtenerGrafo();
 
     std::cout << "\n=== GRAFO DE ENLACES ===\n";
     for (const auto& nodo : grafo) {

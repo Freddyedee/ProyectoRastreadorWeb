@@ -146,6 +146,28 @@ CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: \
  C:/msys64/mingw64/include/c++/15.2.0/istream \
  C:/msys64/mingw64/include/c++/15.2.0/bits/istream.tcc \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/WebCrawler.h \
+ C:/msys64/mingw64/include/c++/15.2.0/vector \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_uninitialized.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_vector.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_bvector.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/vector.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/unordered_map \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/unordered_map.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable_policy.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ext/aligned_buffer.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/node_handle.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/erase_if.h \
+ C:/msys64/mingw64/include/c++/15.2.0/unordered_set \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/unordered_set.h \
+ C:/msys64/mingw64/include/c++/15.2.0/queue \
+ C:/msys64/mingw64/include/c++/15.2.0/deque \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_deque.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/deque.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_queue.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ComunicacionHTTP.h \
  C:/msys64/mingw64/include/curl/curl.h \
  C:/msys64/mingw64/include/curl/curlver.h \
  C:/msys64/mingw64/include/curl/system.h \
@@ -396,24 +418,7 @@ CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: \
  C:/msys64/mingw64/include/curl/header.h \
  C:/msys64/mingw64/include/curl/websockets.h \
  C:/msys64/mingw64/include/curl/mprintf.h \
- C:/msys64/mingw64/include/c++/15.2.0/vector \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_uninitialized.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_vector.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_bvector.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/vector.tcc \
- C:/msys64/mingw64/include/c++/15.2.0/unordered_map \
- C:/msys64/mingw64/include/c++/15.2.0/bits/unordered_map.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/hashtable_policy.h \
- C:/msys64/mingw64/include/c++/15.2.0/ext/aligned_buffer.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/node_handle.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/erase_if.h \
- C:/msys64/mingw64/include/c++/15.2.0/unordered_set \
- C:/msys64/mingw64/include/c++/15.2.0/bits/unordered_set.h \
- C:/msys64/mingw64/include/c++/15.2.0/queue \
- C:/msys64/mingw64/include/c++/15.2.0/deque \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_deque.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/deque.tcc \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_queue.h
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ProcesadorEnlaces.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/GrafoWeb.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ComunicacionHTTP.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/WebCrawler.h

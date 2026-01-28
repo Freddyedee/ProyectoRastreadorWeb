@@ -129,6 +129,78 @@ myapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
 .PHONY : myapp/fast
 
+Negocio/src/ComunicacionHTTP.obj: Negocio/src/ComunicacionHTTP.cpp.obj
+.PHONY : Negocio/src/ComunicacionHTTP.obj
+
+# target to build an object file
+Negocio/src/ComunicacionHTTP.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj
+.PHONY : Negocio/src/ComunicacionHTTP.cpp.obj
+
+Negocio/src/ComunicacionHTTP.i: Negocio/src/ComunicacionHTTP.cpp.i
+.PHONY : Negocio/src/ComunicacionHTTP.i
+
+# target to preprocess a source file
+Negocio/src/ComunicacionHTTP.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.i
+.PHONY : Negocio/src/ComunicacionHTTP.cpp.i
+
+Negocio/src/ComunicacionHTTP.s: Negocio/src/ComunicacionHTTP.cpp.s
+.PHONY : Negocio/src/ComunicacionHTTP.s
+
+# target to generate assembly for a file
+Negocio/src/ComunicacionHTTP.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.s
+.PHONY : Negocio/src/ComunicacionHTTP.cpp.s
+
+Negocio/src/GrafoWeb.obj: Negocio/src/GrafoWeb.cpp.obj
+.PHONY : Negocio/src/GrafoWeb.obj
+
+# target to build an object file
+Negocio/src/GrafoWeb.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj
+.PHONY : Negocio/src/GrafoWeb.cpp.obj
+
+Negocio/src/GrafoWeb.i: Negocio/src/GrafoWeb.cpp.i
+.PHONY : Negocio/src/GrafoWeb.i
+
+# target to preprocess a source file
+Negocio/src/GrafoWeb.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.i
+.PHONY : Negocio/src/GrafoWeb.cpp.i
+
+Negocio/src/GrafoWeb.s: Negocio/src/GrafoWeb.cpp.s
+.PHONY : Negocio/src/GrafoWeb.s
+
+# target to generate assembly for a file
+Negocio/src/GrafoWeb.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.s
+.PHONY : Negocio/src/GrafoWeb.cpp.s
+
+Negocio/src/ProcesadorEnlaces.obj: Negocio/src/ProcesadorEnlaces.cpp.obj
+.PHONY : Negocio/src/ProcesadorEnlaces.obj
+
+# target to build an object file
+Negocio/src/ProcesadorEnlaces.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj
+.PHONY : Negocio/src/ProcesadorEnlaces.cpp.obj
+
+Negocio/src/ProcesadorEnlaces.i: Negocio/src/ProcesadorEnlaces.cpp.i
+.PHONY : Negocio/src/ProcesadorEnlaces.i
+
+# target to preprocess a source file
+Negocio/src/ProcesadorEnlaces.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.i
+.PHONY : Negocio/src/ProcesadorEnlaces.cpp.i
+
+Negocio/src/ProcesadorEnlaces.s: Negocio/src/ProcesadorEnlaces.cpp.s
+.PHONY : Negocio/src/ProcesadorEnlaces.s
+
+# target to generate assembly for a file
+Negocio/src/ProcesadorEnlaces.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.s
+.PHONY : Negocio/src/ProcesadorEnlaces.cpp.s
+
 Negocio/src/WebCrawler.obj: Negocio/src/WebCrawler.cpp.obj
 .PHONY : Negocio/src/WebCrawler.obj
 
@@ -210,6 +282,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myapp"
+	@echo "... Negocio/src/ComunicacionHTTP.obj"
+	@echo "... Negocio/src/ComunicacionHTTP.i"
+	@echo "... Negocio/src/ComunicacionHTTP.s"
+	@echo "... Negocio/src/GrafoWeb.obj"
+	@echo "... Negocio/src/GrafoWeb.i"
+	@echo "... Negocio/src/GrafoWeb.s"
+	@echo "... Negocio/src/ProcesadorEnlaces.obj"
+	@echo "... Negocio/src/ProcesadorEnlaces.i"
+	@echo "... Negocio/src/ProcesadorEnlaces.s"
 	@echo "... Negocio/src/WebCrawler.obj"
 	@echo "... Negocio/src/WebCrawler.i"
 	@echo "... Negocio/src/WebCrawler.s"

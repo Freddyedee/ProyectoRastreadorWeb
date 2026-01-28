@@ -8,6 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ComunicacionHTTP.cpp" "CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj" "gcc" "CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj.d"
+  "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/GrafoWeb.cpp" "CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj" "gcc" "CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj.d"
+  "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ProcesadorEnlaces.cpp" "CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj" "gcc" "CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj.d"
   "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp" "CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj" "gcc" "CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj.d"
   "C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp" "CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj" "gcc" "CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj.d"
   "C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp" "CMakeFiles/myapp.dir/pruebas.cpp.obj" "gcc" "CMakeFiles/myapp.dir/pruebas.cpp.obj.d"

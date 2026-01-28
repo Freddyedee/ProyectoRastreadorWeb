@@ -8,9 +8,7 @@ class ProcesadorEnlaces {
 
     public: 
 
-        ProcesadorEnlaces::ProcesadorEnlaces(const std::string& url) {
-        dominioBase = extraerDominio(url);
-        }
+        ProcesadorEnlaces() = default; 
 
         explicit ProcesadorEnlaces(const std::string& dominio); 
 

@@ -5,11 +5,17 @@
 #include <string>
 #include <iostream>
 #include "Negocio/include/WebCrawler.h"
+#include "../include/ProcesadorEnlaces.h"
+#include "../include/GrafoWeb.h"
 
 class MenuConsola {
 
 private:
     WebCrawler crawler;
+    ComunicacionHTTP comunicacionHttp; 
+    ProcesadorEnlaces procesadorEnlaces; 
+    GrafoWeb grafoWeb; 
+
 
 public: 
 

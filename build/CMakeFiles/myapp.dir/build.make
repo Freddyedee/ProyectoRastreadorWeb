@@ -87,26 +87,11 @@ CMakeFiles/myapp.dir/pruebas.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/pruebas.cpp.s"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp -o CMakeFiles/myapp.dir/pruebas.cpp.s
 
-CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: CMakeFiles/myapp.dir/flags.make
-CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: CMakeFiles/myapp.dir/includes_CXX.rsp
-CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp
-CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj"
-	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj -MF CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj.d -o CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp
-
-CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.i"
-	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp > CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.i
-
-CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.s"
-	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp -o CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.s
-
 CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: CMakeFiles/myapp.dir/flags.make
 CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: CMakeFiles/myapp.dir/includes_CXX.rsp
 CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp
 CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: CMakeFiles/myapp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj -MF CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj.d -o CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp
 
 CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.i: cmake_force
@@ -117,23 +102,89 @@ CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.s"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp -o CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.s
 
+CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj: CMakeFiles/myapp.dir/includes_CXX.rsp
+CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj: C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ComunicacionHTTP.cpp
+CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj -MF CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj.d -o CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ComunicacionHTTP.cpp
+
+CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ComunicacionHTTP.cpp > CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.i
+
+CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ComunicacionHTTP.cpp -o CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.s
+
+CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj: CMakeFiles/myapp.dir/includes_CXX.rsp
+CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj: C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/GrafoWeb.cpp
+CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj -MF CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj.d -o CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/GrafoWeb.cpp
+
+CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/GrafoWeb.cpp > CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.i
+
+CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/GrafoWeb.cpp -o CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.s
+
+CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj: CMakeFiles/myapp.dir/includes_CXX.rsp
+CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj: C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ProcesadorEnlaces.cpp
+CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj -MF CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj.d -o CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ProcesadorEnlaces.cpp
+
+CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ProcesadorEnlaces.cpp > CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.i
+
+CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/ProcesadorEnlaces.cpp -o CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.s
+
+CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: CMakeFiles/myapp.dir/flags.make
+CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: CMakeFiles/myapp.dir/includes_CXX.rsp
+CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp
+CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: CMakeFiles/myapp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj -MF CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj.d -o CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp
+
+CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp > CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.i
+
+CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp -o CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.s
+
 # Object files for target myapp
 myapp_OBJECTS = \
 "CMakeFiles/myapp.dir/pruebas.cpp.obj" \
-"CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj" \
-"CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj"
+"CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj" \
+"CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj" \
+"CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj" \
+"CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj" \
+"CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj"
 
 # External object files for target myapp
 myapp_EXTERNAL_OBJECTS =
 
 C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/pruebas.cpp.obj
-C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj
 C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj
+C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/Negocio/src/ComunicacionHTTP.cpp.obj
+C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj
+C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/Negocio/src/ProcesadorEnlaces.cpp.obj
+C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj
 C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/build.make
 C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: C:/msys64/mingw64/lib/libcurl.dll.a
 C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/linkLibs.rsp
 C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe: CMakeFiles/myapp.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/myapp.dir/objects.a
 	C:/msys64/mingw64/bin/ar.exe qc CMakeFiles/myapp.dir/objects.a @CMakeFiles/myapp.dir/objects1.rsp
 	C:/msys64/mingw64/bin/g++.exe -g -static-libgcc -static-libstdc++ -Wl,--whole-archive CMakeFiles/myapp.dir/objects.a -Wl,--no-whole-archive -o C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe -Wl,--out-implib,libMyCurlApp.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/myapp.dir/linkLibs.rsp

@@ -71,8 +71,11 @@ set(FILES_TO_CHECK
     # MÓDULO: Negocio
     # ========================
     "pruebas.cpp"
-    "Negocio/src/WebCrawler.cpp"
     "Presentacion/src/MenuConsola.cpp"
+    "Negocio/src/ComunicacionHTTP.cpp"
+    "Negocio/src/GrafoWeb.cpp"
+    "Negocio/src/ProcesadorEnlaces.cpp"
+    "Negocio/src/WebCrawler.cpp"
 
 
     # ========================

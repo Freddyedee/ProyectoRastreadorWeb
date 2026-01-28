@@ -1,6 +1,10 @@
 #include "../include/ProcesadorEnlaces.h"
 #include <iostream>
 
+ProcesadorEnlaces::ProcesadorEnlaces(const std::string& url) {
+        dominioBase = extraerDominio(url);
+        }
+
 /**
  * @brief  Analiza el contenido HTML de una página y extrae enlaces válidos.
 
