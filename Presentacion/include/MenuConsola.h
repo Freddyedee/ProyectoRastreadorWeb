@@ -14,7 +14,8 @@ private:
     WebCrawler crawler;
     ComunicacionHTTP comunicacionHttp; 
     ProcesadorEnlaces procesadorEnlaces; 
-    GrafoWeb grafoWeb; 
+    std::string ultimaUrlRastreada;
+   
 
 
 public: 
@@ -24,6 +25,8 @@ public:
     void probarNormalizarUrl(); 
     void probarMismoDominio();
     void probarRastrear();
+    void probarAnalizarGrafo(); 
+    void probarBuscarCamino(); 
 
 
 public:

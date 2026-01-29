@@ -3,6 +3,7 @@
 #include "../include/ProcesadorEnlaces.h" // Incluye la definición de la clase WebCrawler
 
 
+
 #include <iostream>   // Entrada / salida estándar
 
 
@@ -52,7 +53,7 @@ void WebCrawler::rastrear(const std::string& urlInicial, int maxProfundidad, int
     paginasVisitadas.insert(urlInicial); // marca la url inicial como visitada 
     //se evita que el nodo raiz sea revistado. 
 
-    grafo[urlInicial] = std::vector<std::string>(); //inicializa el grafo con la url inicial
+    grafo.agregarNodo(urlInicial); //inicializa el grafo con la url inicial
     
     int visitadasCount = 1; //contador de paginas visitadas
     //se inicializa en 1 porque la url inicial ya se cuenta como visitada
@@ -89,8 +90,7 @@ void WebCrawler::rastrear(const std::string& urlInicial, int maxProfundidad, int
                 //inserta el nuevo enlace en la cola con profundidad incrementada
                 //al hacer esto incrementamos la profundidad para reflejar el nivel de exploracion
                 
-                grafo[urlActual].push_back(enlace);   //se agrega el enlace al grafo como nodo hijo de la pagina actual
-                grafo[enlace] = std::vector<std::string>(); //inicializa el nodo del grafo para el nuevo enlace
+                grafo.agregarArista(urlActual, enlace); 
 
                 visitadasCount++; // Incrementa el contador de páginas visitadas
             
@@ -102,6 +102,8 @@ void WebCrawler::rastrear(const std::string& urlInicial, int maxProfundidad, int
             }
         }
     }
+
+
 
 
 

@@ -417,5 +417,6 @@ CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj: \
  C:/msys64/mingw64/include/curl/header.h \
  C:/msys64/mingw64/include/curl/websockets.h \
  C:/msys64/mingw64/include/curl/mprintf.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/GrafoWeb.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ComunicacionHTTP.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ProcesadorEnlaces.h

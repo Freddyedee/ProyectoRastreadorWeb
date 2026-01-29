@@ -418,8 +418,20 @@ CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj: \
  C:/msys64/mingw64/include/curl/header.h \
  C:/msys64/mingw64/include/curl/websockets.h \
  C:/msys64/mingw64/include/curl/mprintf.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/GrafoWeb.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ProcesadorEnlaces.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/GrafoWeb.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ComunicacionHTTP.h \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/WebCrawler.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Datos/include/GestorArchivos.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/AnalizadorGrafo.h \
+ C:/msys64/mingw64/include/c++/15.2.0/algorithm \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algo.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/algorithmfwd.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h \
+ C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
+ C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/ProcesadorEnlaces.h \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/BuscadorClave.h \
  C:/msys64/mingw64/include/c++/15.2.0/limits

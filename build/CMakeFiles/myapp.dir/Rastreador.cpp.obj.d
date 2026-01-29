@@ -1,5 +1,5 @@
-CMakeFiles/myapp.dir/pruebas.cpp.obj: \
- C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp \
+CMakeFiles/myapp.dir/Rastreador.cpp.obj: \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Rastreador.cpp \
  C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/include/MenuConsola.h \
  C:/msys64/mingw64/include/c++/15.2.0/string \
  C:/msys64/mingw64/include/c++/15.2.0/bits/requires_hosted.h \

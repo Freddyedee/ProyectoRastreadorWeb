@@ -70,12 +70,15 @@ set(FILES_TO_CHECK
     # ========================
     # MÓDULO: Negocio
     # ========================
-    "pruebas.cpp"
-    "Presentacion/src/MenuConsola.cpp"
+    "Rastreador.cpp"
     "Negocio/src/ComunicacionHTTP.cpp"
     "Negocio/src/GrafoWeb.cpp"
     "Negocio/src/ProcesadorEnlaces.cpp"
     "Negocio/src/WebCrawler.cpp"
+    "Negocio/src/BuscadorClave.cpp"
+    "Negocio/src/AnalizadorGrafo.cpp"
+    "Datos/src/GestorArchivos.cpp"
+    "Presentacion/src/MenuConsola.cpp"
 
 
     # ========================
@@ -137,7 +140,7 @@ target_link_libraries(myapp PRIVATE CURL::libcurl)
 
 set_target_properties(myapp PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
-    OUTPUT_NAME "MyCurlApp"
+    OUTPUT_NAME "Rastreador"
 )
 
 

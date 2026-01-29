@@ -1,6 +1,6 @@
-CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj: \
- C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/GrafoWeb.cpp \
- C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/include/GrafoWeb.h \
+CMakeFiles/myapp.dir/Datos/src/GestorArchivos.cpp.obj: \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Datos/src/GestorArchivos.cpp \
+ C:/Users/USER/Desktop/proyectoEstructuraDatos/Datos/include/GestorArchivos.h \
  C:/msys64/mingw64/include/c++/15.2.0/string \
  C:/msys64/mingw64/include/c++/15.2.0/bits/requires_hosted.h \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
@@ -112,11 +112,54 @@ CMakeFiles/myapp.dir/Negocio/src/GrafoWeb.cpp.obj: \
  C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/node_handle.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/erase_if.h \
- C:/msys64/mingw64/include/c++/15.2.0/algorithm \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_algo.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/algorithmfwd.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_heap.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/uniform_int_dist.h \
- C:/msys64/mingw64/include/c++/15.2.0/bits/stl_tempbuf.h \
- C:/msys64/mingw64/include/c++/15.2.0/pstl/glue_algorithm_defs.h \
- C:/msys64/mingw64/include/c++/15.2.0/pstl/execution_defs.h
+ C:/msys64/mingw64/include/c++/15.2.0/fstream \
+ C:/msys64/mingw64/include/c++/15.2.0/istream \
+ C:/msys64/mingw64/include/c++/15.2.0/ios \
+ C:/msys64/mingw64/include/c++/15.2.0/exception \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_init_exception.h \
+ C:/msys64/mingw64/include/c++/15.2.0/typeinfo \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/nested_exception.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/ios_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/ext/atomicity.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
+ C:/msys64/mingw64/include/pthread.h \
+ C:/msys64/mingw64/include/sys/types.h \
+ C:/msys64/mingw64/include/process.h \
+ C:/msys64/mingw64/include/corecrt_startup.h \
+ C:/msys64/mingw64/include/signal.h \
+ C:/msys64/mingw64/include/pthread_signal.h \
+ C:/msys64/mingw64/include/time.h C:/msys64/mingw64/include/sys/timeb.h \
+ C:/msys64/mingw64/include/sec_api/sys/timeb_s.h \
+ C:/msys64/mingw64/include/_timeval.h \
+ C:/msys64/mingw64/include/pthread_time.h \
+ C:/msys64/mingw64/include/pthread_compat.h \
+ C:/msys64/mingw64/include/sched.h \
+ C:/msys64/mingw64/include/pthread_unistd.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_classes.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/system_error \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/error_constants.h \
+ C:/msys64/mingw64/include/c++/15.2.0/stdexcept \
+ C:/msys64/mingw64/include/c++/15.2.0/streambuf \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/streambuf.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.h \
+ C:/msys64/mingw64/include/c++/15.2.0/cwctype \
+ C:/msys64/mingw64/include/wctype.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/streambuf_iterator.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/locale_facets.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/ostream \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/ostream.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/istream.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/codecvt.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/basic_file.h \
+ C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++io.h \
+ C:/msys64/mingw64/include/c++/15.2.0/bits/fstream.tcc \
+ C:/msys64/mingw64/include/c++/15.2.0/iostream

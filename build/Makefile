@@ -129,6 +129,78 @@ myapp/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/build
 .PHONY : myapp/fast
 
+Datos/src/GestorArchivos.obj: Datos/src/GestorArchivos.cpp.obj
+.PHONY : Datos/src/GestorArchivos.obj
+
+# target to build an object file
+Datos/src/GestorArchivos.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Datos/src/GestorArchivos.cpp.obj
+.PHONY : Datos/src/GestorArchivos.cpp.obj
+
+Datos/src/GestorArchivos.i: Datos/src/GestorArchivos.cpp.i
+.PHONY : Datos/src/GestorArchivos.i
+
+# target to preprocess a source file
+Datos/src/GestorArchivos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Datos/src/GestorArchivos.cpp.i
+.PHONY : Datos/src/GestorArchivos.cpp.i
+
+Datos/src/GestorArchivos.s: Datos/src/GestorArchivos.cpp.s
+.PHONY : Datos/src/GestorArchivos.s
+
+# target to generate assembly for a file
+Datos/src/GestorArchivos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Datos/src/GestorArchivos.cpp.s
+.PHONY : Datos/src/GestorArchivos.cpp.s
+
+Negocio/src/AnalizadorGrafo.obj: Negocio/src/AnalizadorGrafo.cpp.obj
+.PHONY : Negocio/src/AnalizadorGrafo.obj
+
+# target to build an object file
+Negocio/src/AnalizadorGrafo.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/AnalizadorGrafo.cpp.obj
+.PHONY : Negocio/src/AnalizadorGrafo.cpp.obj
+
+Negocio/src/AnalizadorGrafo.i: Negocio/src/AnalizadorGrafo.cpp.i
+.PHONY : Negocio/src/AnalizadorGrafo.i
+
+# target to preprocess a source file
+Negocio/src/AnalizadorGrafo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/AnalizadorGrafo.cpp.i
+.PHONY : Negocio/src/AnalizadorGrafo.cpp.i
+
+Negocio/src/AnalizadorGrafo.s: Negocio/src/AnalizadorGrafo.cpp.s
+.PHONY : Negocio/src/AnalizadorGrafo.s
+
+# target to generate assembly for a file
+Negocio/src/AnalizadorGrafo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/AnalizadorGrafo.cpp.s
+.PHONY : Negocio/src/AnalizadorGrafo.cpp.s
+
+Negocio/src/BuscadorClave.obj: Negocio/src/BuscadorClave.cpp.obj
+.PHONY : Negocio/src/BuscadorClave.obj
+
+# target to build an object file
+Negocio/src/BuscadorClave.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/BuscadorClave.cpp.obj
+.PHONY : Negocio/src/BuscadorClave.cpp.obj
+
+Negocio/src/BuscadorClave.i: Negocio/src/BuscadorClave.cpp.i
+.PHONY : Negocio/src/BuscadorClave.i
+
+# target to preprocess a source file
+Negocio/src/BuscadorClave.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/BuscadorClave.cpp.i
+.PHONY : Negocio/src/BuscadorClave.cpp.i
+
+Negocio/src/BuscadorClave.s: Negocio/src/BuscadorClave.cpp.s
+.PHONY : Negocio/src/BuscadorClave.s
+
+# target to generate assembly for a file
+Negocio/src/BuscadorClave.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Negocio/src/BuscadorClave.cpp.s
+.PHONY : Negocio/src/BuscadorClave.cpp.s
+
 Negocio/src/ComunicacionHTTP.obj: Negocio/src/ComunicacionHTTP.cpp.obj
 .PHONY : Negocio/src/ComunicacionHTTP.obj
 
@@ -249,29 +321,29 @@ Presentacion/src/MenuConsola.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.s
 .PHONY : Presentacion/src/MenuConsola.cpp.s
 
-pruebas.obj: pruebas.cpp.obj
-.PHONY : pruebas.obj
+Rastreador.obj: Rastreador.cpp.obj
+.PHONY : Rastreador.obj
 
 # target to build an object file
-pruebas.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/pruebas.cpp.obj
-.PHONY : pruebas.cpp.obj
+Rastreador.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Rastreador.cpp.obj
+.PHONY : Rastreador.cpp.obj
 
-pruebas.i: pruebas.cpp.i
-.PHONY : pruebas.i
+Rastreador.i: Rastreador.cpp.i
+.PHONY : Rastreador.i
 
 # target to preprocess a source file
-pruebas.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/pruebas.cpp.i
-.PHONY : pruebas.cpp.i
+Rastreador.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Rastreador.cpp.i
+.PHONY : Rastreador.cpp.i
 
-pruebas.s: pruebas.cpp.s
-.PHONY : pruebas.s
+Rastreador.s: Rastreador.cpp.s
+.PHONY : Rastreador.s
 
 # target to generate assembly for a file
-pruebas.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/pruebas.cpp.s
-.PHONY : pruebas.cpp.s
+Rastreador.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/myapp.dir/build.make CMakeFiles/myapp.dir/Rastreador.cpp.s
+.PHONY : Rastreador.cpp.s
 
 # Help Target
 help:
@@ -282,6 +354,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... myapp"
+	@echo "... Datos/src/GestorArchivos.obj"
+	@echo "... Datos/src/GestorArchivos.i"
+	@echo "... Datos/src/GestorArchivos.s"
+	@echo "... Negocio/src/AnalizadorGrafo.obj"
+	@echo "... Negocio/src/AnalizadorGrafo.i"
+	@echo "... Negocio/src/AnalizadorGrafo.s"
+	@echo "... Negocio/src/BuscadorClave.obj"
+	@echo "... Negocio/src/BuscadorClave.i"
+	@echo "... Negocio/src/BuscadorClave.s"
 	@echo "... Negocio/src/ComunicacionHTTP.obj"
 	@echo "... Negocio/src/ComunicacionHTTP.i"
 	@echo "... Negocio/src/ComunicacionHTTP.s"
@@ -297,9 +378,9 @@ help:
 	@echo "... Presentacion/src/MenuConsola.obj"
 	@echo "... Presentacion/src/MenuConsola.i"
 	@echo "... Presentacion/src/MenuConsola.s"
-	@echo "... pruebas.obj"
-	@echo "... pruebas.i"
-	@echo "... pruebas.s"
+	@echo "... Rastreador.obj"
+	@echo "... Rastreador.i"
+	@echo "... Rastreador.s"
 .PHONY : help
 
 

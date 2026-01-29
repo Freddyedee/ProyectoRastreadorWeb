@@ -1,25 +1,23 @@
-#ifndef GESTOR_ARCHIVOS_H
-#define GESTOR_ARCHIVOS_H
+#ifndef GESTORARCHIVOS_H
+#define GESTORARCHIVOS_H
 
 #include <string>
-
-#include <fstream>
-#include <string>
-#include <iostream>
 #include <vector>
+#include <unordered_map>
 
 class GestorArchivos {
-    private: 
-        std::string nombreArchivo;
 
-    public:
-        GestorArchivos(std::string nombre);
-         void limpiarArchivo();
-         void guardarEnlace(std::string urlOrigen, std::string urlDestino); 
+public:
 
-    };  
+  static void guardarGrafo(const std::unordered_map<std::string, std::vector<std::string>>& grafo, const std::string& archivo);
 
 
+    // Guarda una lista de URLs (resultados, caminos, etc.)
+    void guardarLista(
+        const std::vector<std::string>& datos,
+        const std::string& nombreArchivo
+    );
 
+};
 
-#endif // GESTOR_ARCHIVOS_H
+#endif

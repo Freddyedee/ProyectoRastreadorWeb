@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.exe"
+			"path" : "C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/Rastreador.exe"
 		},
 		{
-			"path" : "C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/MyCurlApp.pdb"
+			"path" : "C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/Rastreador.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -30,25 +30,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 113,
+				"line" : 116,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 131,
+				"line" : 134,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 149,
+				"line" : 152,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 121,
+				"line" : 124,
 				"parent" : 0
 			}
 		]
@@ -101,7 +101,10 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6,
+				7,
+				8
 			]
 		}
 	],
@@ -131,7 +134,7 @@
 		"language" : "CXX"
 	},
 	"name" : "myapp",
-	"nameOnDisk" : "MyCurlApp.exe",
+	"nameOnDisk" : "Rastreador.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -148,7 +151,10 @@
 				2,
 				3,
 				4,
-				5
+				5,
+				6,
+				7,
+				8
 			]
 		}
 	],
@@ -157,13 +163,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "pruebas.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Presentacion/src/MenuConsola.cpp",
+			"path" : "Rastreador.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -188,6 +188,30 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Negocio/src/WebCrawler.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Negocio/src/BuscadorClave.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Negocio/src/AnalizadorGrafo.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Datos/src/GestorArchivos.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Presentacion/src/MenuConsola.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

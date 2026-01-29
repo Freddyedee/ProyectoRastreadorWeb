@@ -1,15 +1,9 @@
 [
 {
   "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
-  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/pruebas.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp",
-  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/pruebas.cpp",
-  "output": "CMakeFiles/myapp.dir/pruebas.cpp.obj"
-},
-{
-  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
-  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp",
-  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp",
-  "output": "CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj"
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Rastreador.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Rastreador.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Rastreador.cpp",
+  "output": "CMakeFiles/myapp.dir/Rastreador.cpp.obj"
 },
 {
   "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
@@ -34,5 +28,29 @@
   "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp",
   "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/WebCrawler.cpp",
   "output": "CMakeFiles/myapp.dir/Negocio/src/WebCrawler.cpp.obj"
+},
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Negocio/src/BuscadorClave.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/BuscadorClave.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/BuscadorClave.cpp",
+  "output": "CMakeFiles/myapp.dir/Negocio/src/BuscadorClave.cpp.obj"
+},
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Negocio/src/AnalizadorGrafo.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/AnalizadorGrafo.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Negocio/src/AnalizadorGrafo.cpp",
+  "output": "CMakeFiles/myapp.dir/Negocio/src/AnalizadorGrafo.cpp.obj"
+},
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Datos/src/GestorArchivos.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Datos/src/GestorArchivos.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Datos/src/GestorArchivos.cpp",
+  "output": "CMakeFiles/myapp.dir/Datos/src/GestorArchivos.cpp.obj"
+},
+{
+  "directory": "C:/Users/USER/Desktop/proyectoEstructuraDatos/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/myapp.dir/includes_CXX.rsp -g -std=gnu++17 -Wall -g -O0 -o CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj -c C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp",
+  "file": "C:/Users/USER/Desktop/proyectoEstructuraDatos/Presentacion/src/MenuConsola.cpp",
+  "output": "CMakeFiles/myapp.dir/Presentacion/src/MenuConsola.cpp.obj"
 }
 ]

@@ -3,6 +3,9 @@
 #include "../include/ComunicacionHTTP.h"
 #include "../include/GrafoWeb.h"
 #include "../include/WebCrawler.h"
+#include "../proyectoEstructuraDatos/Datos/include/GestorArchivos.h"
+#include "../include/AnalizadorGrafo.h"
+#include "../include/BuscadorClave.h"
 
 #include <iostream>
 #include <limits>
@@ -23,6 +26,8 @@ void MenuConsola::ejecutar(){
         std::cout << "[3] Probar normalizacion de URL\n";
         std::cout << "[4] Probar verificacion de dominio\n";
         std::cout << "[5] Probar rastreo completo (BFS)\n";
+        std::cout << "[6] Analizar grafo generado\n";
+        std::cout << "[7] Buscar camino por palabra clave\n";
         std::cout << "[0] Salir del programa\n\n";
 
         std::cout << "Seleccione una opcion (0-5): ";
@@ -42,7 +47,10 @@ void MenuConsola::ejecutar(){
             case 2: probarExtraerEnlaces(); break;
             case 3: probarNormalizarUrl(); break;
             case 4: probarMismoDominio(); break;
-            //case 5: probarRastrear(); break;   // Descomentado
+            case 5: probarRastrear(); break;   
+            case 6: probarAnalizarGrafo(); break;
+            case 7: probarBuscarCamino(); break;
+
             case 0:
                 std::cout << "================================================================================\n";
                 std::cout << "   ¡Gracias por usar el Web Crawler de pruebas!\n";
@@ -204,26 +212,86 @@ void MenuConsola::probarRastrear() {
     std::cin >> maxPaginas;
 
     std::cout << "\nIniciando rastreo...\n";
+
     crawler.rastrear(url, profundidad, maxPaginas);
 
-    const auto& grafo = grafoWeb.obtenerGrafo();
+    // Obtener referencia al mapa real del grafo
+    const auto& grafoMap = crawler.getGrafo();  // Usa un nombre claro
 
-    std::cout << "Rastreo completado.\n";
-    std::cout << "Paginas descubiertas: " << grafo.size() << "\n\n";
+   std::cout << "Rastreo completado.\n";
+    std::cout << "Paginas descubiertas: " << grafoMap.size() << "\n\n";
 
     std::cout << "================================================================================\n";
     std::cout << "                       GRAFO DE ENLACES GENERADO                       \n";
     std::cout << "================================================================================\n\n";
 
-    for (const auto& nodo : grafo) {
-        std::cout << "Nodo: " << nodo.first << " (" << nodo.second.size() << " enlaces salientes)\n";
-        for (const auto& enlace : nodo.second) {
-            std::cout << "   -> " << enlace << "\n";
+    std::cout << "================ GRAFO GENERADO ================\n\n";
+
+    for (const auto& par : grafoMap) {
+        std::cout << par.first << " -> ";
+        if (par.second.empty()) {
+            std::cout << "(sin enlaces salientes)";
+        } else {
+            for (const auto& enlace : par.second) {
+                std::cout << enlace << " ";
+            }
         }
         std::cout << "\n";
     }
 
-    std::cout << "Presione Enter para volver al menu principal...";
+    std::cout << "\nTotal de paginas en el grafo: " << grafoMap.size() << "\n";
+    GestorArchivos::guardarGrafo(crawler.getGrafo(), "grafo.txt");
+    std::cout << "Grafo guardado en grafo_uneg.txt\n";
+
+    std::cout << "\nPresione Enter para volver al menu principal...";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+}
+
+
+//funciones de prueba del inciso b y c
+
+void MenuConsola::probarAnalizarGrafo() {
+    std::cout << "--------------------------------------------------------------------------------\n";
+    std::cout << "Prueba: Analisis de grafo\n";
+    std::cout << "--------------------------------------------------------------------------------\n";
+
+    if (crawler.getGrafo().empty()) {
+        std::cout << "El grafo está vacío. Realice primero un rastreo.\n";
+    } else {
+        std::string paginaInicial;
+        std::cout << "Ingrese URL inicial para calcular profundidad: ";
+        std::cin >> paginaInicial;
+
+        AnalizadorGrafo analizador(crawler.getGrafo(), ""); // Dominio vacío opcional
+        analizador.calcularMetricas(paginaInicial);
+    }
+
+    std::cout << "\nPresione Enter para volver al menu principal...";
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    std::cin.get();
+}
+
+void MenuConsola::probarBuscarCamino() {
+    std::cout << "--------------------------------------------------------------------------------\n";
+    std::cout << "Prueba: Busqueda de camino por palabra clave\n";
+    std::cout << "--------------------------------------------------------------------------------\n";
+
+    if (crawler.getGrafo().empty()) {
+        std::cout << "El grafo está vacío. Realice primero un rastreo.\n";
+    } else {
+        std::string paginaInicial, palabraClave;
+        std::cout << "Ingrese URL inicial: ";
+        std::cin >> paginaInicial;
+        std::cout << "Ingrese palabra clave a buscar en URLs: ";
+        std::cin >> palabraClave;
+
+        BuscadorClave buscador(crawler.getGrafo());
+        std::vector<std::string> camino = buscador.buscarCaminoConPalabraClave(paginaInicial, palabraClave);
+        buscador.imprimirCamino(camino);
+    }
+
+    std::cout << "\nPresione Enter para volver al menu principal...";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     std::cin.get();
 }
