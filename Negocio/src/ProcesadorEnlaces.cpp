@@ -1,6 +1,7 @@
 #include "../include/ProcesadorEnlaces.h"
 #include <iostream>
 #include <algorithm> 
+
 ProcesadorEnlaces::ProcesadorEnlaces(const std::string& url) {
         dominioBase = extraerDominio(url);
         }

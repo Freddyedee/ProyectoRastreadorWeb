@@ -13,7 +13,7 @@
  */
 class GrafoWeb {
 private:
-    std::unordered_map<std::string, std::vector<std::string>> adyacencias;  // ← AÑADE ESTO
+    std::unordered_map<std::string, std::vector<std::string>> adyacencias;  
 
 public:
     // Agrega un nodo al grafo si no existe

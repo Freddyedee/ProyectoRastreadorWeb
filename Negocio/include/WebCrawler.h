@@ -9,7 +9,7 @@
 #include "ComunicacionHTTP.h"
 #include "GrafoWeb.h"
 
-// Clase que implementa un rastreador web (web crawler) para explorar y analizar páginas web.
+// Clase que implementa un rastreador web (web crawler) qie explorar y analizar páginas web.
 class WebCrawler {
 
 private: 
