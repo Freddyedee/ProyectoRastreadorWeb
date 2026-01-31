@@ -1,5 +1,5 @@
-#ifndef AnalizadorGrafo_H
-#define AnalizadorGrafo_H
+#ifndef BUSCADORCLAVE_H
+#define BUSCADORCLAVE_H
 
 #include <vector>
 #include <string>
@@ -39,4 +39,4 @@ class BuscadorClave{
             const std::unordered_map<std::string, std::string>& padre) const;
 };
 
-#endif
+#endif //BUSCADORCLAVE_H

@@ -19,7 +19,7 @@ void AnalizadorGrafo::calcularMetricas(const std::string& paginaInicial)
     // 3. Profundidad máxima (BFS)
     int profundidadMaxima = calcularProfundidadMaxima(paginaInicial);
 
-    // Diámetro aproximado (en este caso, igual a profundidad máxima)
+    // Diámetro aproximado 
     int diametroAproximado = profundidadMaxima;
 
     // 4. Mostrar resultados

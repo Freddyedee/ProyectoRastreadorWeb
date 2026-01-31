@@ -12,9 +12,8 @@
  * desde una página hacia otra.
  */
 class GrafoWeb {
-
 private:
-    std::unordered_map<std::string, std::vector<std::string>> adyacencias;
+    std::unordered_map<std::string, std::vector<std::string>> adyacencias;  
 
 public:
     // Agrega un nodo al grafo si no existe
@@ -26,10 +25,14 @@ public:
     // Verifica si un nodo existe
     bool existeNodo(const std::string& url) const;
 
-    // Devuelve el grafo completo (solo lectura)
-    const std::unordered_map<std::string, std::vector<std::string>>& obtenerGrafo() const;
+    // Getter para obtener referencia constante al grafo interno
+    const std::unordered_map<std::string, std::vector<std::string>>& getGrafo() const;
 
-    void limpiar();
+    // método size para comodidad
+    size_t size() const { return adyacencias.size(); }
+
+    // limpiar el grafo
+    void clear() { adyacencias.clear(); }
 };
 
 #endif // GRAFOWEB_H

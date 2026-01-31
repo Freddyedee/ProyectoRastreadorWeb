@@ -1,4 +1,5 @@
 #include "../include/GrafoWeb.h"
+#include <algorithm> 
 
 void GrafoWeb::agregarNodo(const std::string& url) {
     if (!existeNodo(url)) {
@@ -9,7 +10,12 @@ void GrafoWeb::agregarNodo(const std::string& url) {
 void GrafoWeb::agregarArista(const std::string& origen, const std::string& destino) {
     agregarNodo(origen);
     agregarNodo(destino);
-    adyacencias[origen].push_back(destino);
+
+    // Solo agregamos si no existe ya esa conexión específica
+    auto& lista = adyacencias[origen];
+    if (std::find(lista.begin(), lista.end(), destino) == lista.end()) {
+        lista.push_back(destino);
+    }
 }
 
 bool GrafoWeb::existeNodo(const std::string& url) const {
@@ -17,16 +23,9 @@ bool GrafoWeb::existeNodo(const std::string& url) const {
 }
 
 /**
- * @brief  Devuelve el grafo de enlaces generado por el rastreo.
- * 
- * @return const std::unordered_map<std::string, std::vector<std::string>>& Grafo de enlaces.
+ * @brief Devuelve referencia constante al grafo interno.
  */
-
-const std::unordered_map<std::string, std::vector<std::string>>&
-GrafoWeb::obtenerGrafo() const {
-    return adyacencias;
-}
-
-void GrafoWeb::limpiar() {
-    adyacencias.clear();
+const std::unordered_map<std::string, std::vector<std::string>>& 
+GrafoWeb::getGrafo() const {
+    return adyacencias;  
 }

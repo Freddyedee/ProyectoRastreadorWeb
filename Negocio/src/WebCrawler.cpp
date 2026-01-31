@@ -3,6 +3,7 @@
 #include "../include/ProcesadorEnlaces.h" // Incluye la definición de la clase WebCrawler
 
 
+
 #include <iostream>   // Entrada / salida estándar
 #include <algorithm>
 
@@ -54,7 +55,10 @@ void WebCrawler::rastrear(const std::string& urlInicial,
 
     grafoDestino.agregarNodo(urlInicial);  // ← importante: agregamos el nodo inicial
 
-    int visitadasCount = 1;
+    grafo.agregarNodo(urlInicial); //inicializa el grafo con la url inicial
+    
+    int visitadasCount = 1; //contador de paginas visitadas
+    //se inicializa en 1 porque la url inicial ya se cuenta como visitada
 
     while (!paginasPendientes.empty() && visitadasCount < maxPaginas) {
         auto [urlActual, profundidadActual] = paginasPendientes.front();
@@ -73,11 +77,14 @@ void WebCrawler::rastrear(const std::string& urlInicial,
         // PASO 4: Extraer enlaces
         std::vector<std::string> enlaces = procesador.extraerEnlaces(html, urlActual);
 
-        // Procesamos cada enlace
-        for (const auto& enlace : enlaces) {
-            if (paginasVisitadas.find(enlace) == paginasVisitadas.end()) {
-                paginasVisitadas.insert(enlace);
-                paginasPendientes.push({enlace, profundidadActual + 1});
+            //verifica si el enlace ya fue visitado
+            if(paginasVisitadas.find(enlace) == paginasVisitadas.end()){ // si no ha sido visitada
+                paginasVisitadas.insert(enlace); // marca el enlace como visitado
+                paginasPendientes.push(std::make_pair(enlace, profundidadActual + 1)); 
+                //inserta el nuevo enlace en la cola con profundidad incrementada
+                //al hacer esto incrementamos la profundidad para reflejar el nivel de exploracion
+                
+                grafo.agregarArista(urlActual, enlace); 
 
                 // Agregamos al grafo usando los métodos de GrafoWeb
                 grafoDestino.agregarArista(urlActual, enlace);
@@ -95,4 +102,6 @@ void WebCrawler::rastrear(const std::string& urlInicial,
     std::cout << "DEBUG: Rastreo finalizado. Páginas agregadas: " 
               << grafoDestino.obtenerGrafo().size() << "\n";
 }
+
+
 

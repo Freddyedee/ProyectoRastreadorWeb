@@ -9,16 +9,16 @@
 #include "ComunicacionHTTP.h"
 #include "GrafoWeb.h"
 
-
-// Clase que implementa un rastreador web (web crawler) para explorar y analizar páginas web.
+// Clase que implementa un rastreador web (web crawler) qie explorar y analizar páginas web.
 class WebCrawler {
 
-    public:  
-        std::string dominio; //almacena el dominio base del URL inicial 
-        std::unordered_map<std::string, std::vector<std::string>> grafo; //Representacion del grafo de paginas web, donde std::string -> url y vector<string> -> urls enlazadas
+private: 
+    GrafoWeb grafo;
+   
+public:  
+        std::string dominio; //aalmacena el dominio base del URL inicial 
         ComunicacionHTTP almacenadorDatos;
-        
-
+         
         /**
          * @brief 
          * Procede a realizarse el proceso de rastreo utilizando BFS
@@ -28,7 +28,20 @@ class WebCrawler {
          * @note Este método construye internamente el grafo de enlaces.
 
          */
-        void rastrear(const std::string& urlInicial, int maxProfundidad, int maxPaginas, GrafoWeb& grafoDestino);
+        void rastrear(const std::string& urlInicial, int maxProfundidad, int maxPaginas);
+
+        /**
+         * @brief Get the Grafo object
+         * Devuelve el grafo construido por el rastreador web.
+         * @return const std::unordered_map<std::string, std::vector<std::string>>& , referiencia constante al grafo.
+         * 
+         * @note Se retorna como referencia constante para evitar copias innecesarias y modificaciones externas.
+         */
+        const std::unordered_map<std::string, std::vector<std::string>>& getGrafo() const {
+        return grafo.getGrafo();
+    }
+
+
 };
 
 #endif // WEBCRAWLER_H

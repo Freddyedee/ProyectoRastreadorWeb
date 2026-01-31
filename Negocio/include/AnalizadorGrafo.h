@@ -1,5 +1,5 @@
-#ifndef AnalizadorGrafo_H
-#define AnalizadorGrafo_H
+#ifndef ANALIZADORGRAFO_H
+#define ANALIZADORGRAFO_H
 
 #include <string>
 #include <iostream>
@@ -9,7 +9,7 @@
 #include <vector>            // Para guardar listas de cosas (como array que crece solo)
 #include <algorithm>         // Para funciones utiles como transformar texto
 #include "../include/ProcesadorEnlaces.h"
-#define NOMINMAX  
+//#define NOMINMAX  depnde de la version de msys64 y mingw64 
 
 
 class AnalizadorGrafo {
@@ -41,4 +41,4 @@ public:
     void calcularMetricas(const std::string& paginaInicial);
 };
 
-#endif
+#endif //ANALIZADORGRAFO_H

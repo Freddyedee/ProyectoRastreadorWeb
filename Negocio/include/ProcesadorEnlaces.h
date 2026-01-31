@@ -43,10 +43,6 @@ class ProcesadorEnlaces {
         * @return false si no pertenece dentro del dominio base. 
         */
         bool esMismoDominio(const std::string& url);
-
-        std::string getDominioBase(){
-            return this->dominioBase; 
-        }; 
         
          /**
         * @brief 
@@ -57,12 +53,26 @@ class ProcesadorEnlaces {
         */
         std::string extraerDominio(const std::string& url);
 
+        std::string getDominioBase(){
+            return this->dominioBase; 
+        }; 
+        
     private: 
+
        
         std::string dominioBase;
+        std::string normalizarDominio(const std::string& dominio);
+
+          // === Métodos privados para filtros internos ===
+        bool esEnlaceValido(const std::string& url);      ///< Verifica si el enlace es navegable y no es vacío ni javascript/mail/tel
+        bool esRecursoEstatico(const std::string& url);   ///< Filtra recursos estáticos como CSS, JS, imágenes
+        bool perteneceAlDominio(const std::string& url);  ///< Comprueba si el enlace pertenece al dominio base
+};
 
         
-};
+
+
+
 
 
 

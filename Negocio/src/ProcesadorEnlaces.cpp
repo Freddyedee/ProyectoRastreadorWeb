@@ -1,5 +1,6 @@
 #include "../include/ProcesadorEnlaces.h"
 #include <iostream>
+#include <algorithm> 
 
 ProcesadorEnlaces::ProcesadorEnlaces(const std::string& url) {
         dominioBase = extraerDominio(url);
@@ -32,101 +33,64 @@ ProcesadorEnlaces::ProcesadorEnlaces(const std::string& url) {
  */
 
 std::vector<std::string> ProcesadorEnlaces::extraerEnlaces(const std::string& html, const std::string& base_url) {
-    // Actualizamos el dominio base cada vez (por si cambia en redirecciones)
-    this->dominioBase = extraerDominio(base_url);
+    dominioBase = extraerDominio(base_url);  // Actualiza dominio base
+    std::vector<std::string> enlacesExtraidos;
 
-    std::unordered_set<std::string> enlacesUnicos;  // Evitamos duplicados
-    size_t posicion = 0;
+    size_t pos = 0;
 
-    while (true) {
-        // Buscamos <a ... href=... (ignoramos mayúsculas/minúsculas)
-        size_t tagInicio = html.find("<a", posicion);
-        if (tagInicio == std::string::npos) break;
+    while (pos < html.length()) {
+        // === PASO 1: Buscar SOLO etiquetas <a o <A (ignora <link>, <script>, etc.) ===
+        size_t aTagStart = html.find("<a", pos);
+        if (aTagStart == std::string::npos) {
+            aTagStart = html.find("<A", pos);
+            if (aTagStart == std::string::npos) break;
+        }
 
-        // Buscamos href= dentro del tag <a ...>
-        size_t hrefPos = html.find("href=", tagInicio);
-        if (hrefPos == std::string::npos || hrefPos > html.find(">", tagInicio)) {
-            posicion = tagInicio + 2;  // Avanzamos para evitar bucle infinito
+        // === PASO 2: Dentro de esta etiqueta <a, buscar href= ===
+        size_t hrefPos = html.find("href", aTagStart);
+        if (hrefPos == std::string::npos || hrefPos > html.find('>', aTagStart)) {
+            pos = aTagStart + 2;
             continue;
         }
 
-        hrefPos += 5;  // Saltamos "href="
-
-        // Saltamos espacios después de href=
-        while (hrefPos < html.size() && html[hrefPos] == ' ') ++hrefPos;
-        if (hrefPos >= html.size()) break;
-
-        // Comilla de apertura: " o '
-        char comilla = html[hrefPos];
-        if (comilla != '"' && comilla != '\'') {
-            posicion = hrefPos + 1;
+        size_t eqPos = html.find('=', hrefPos);
+        if (eqPos == std::string::npos) {
+            pos = hrefPos + 4;
             continue;
         }
 
-        ++hrefPos;  // Saltamos la comilla de apertura
+        // Saltar espacios después del =
+        size_t quoteStart = eqPos + 1;
+        while (quoteStart < html.length() && std::isspace(html[quoteStart])) ++quoteStart;
 
-        // Buscamos la comilla de cierre
-        size_t finUrl = html.find(comilla, hrefPos);
-        if (finUrl == std::string::npos) break;
+        if (quoteStart >= html.length()) break;
 
-        std::string urlExtraida = html.substr(hrefPos, finUrl - hrefPos);
-
-        // Validaciones básicas
-        if (urlExtraida.empty() ||
-            urlExtraida[0] == '#' ||                        // Anclas internas
-            urlExtraida.find("mailto:") != std::string::npos ||
-            urlExtraida.find("tel:") != std::string::npos ||
-            urlExtraida.find("javascript:") != std::string::npos) {
-            posicion = finUrl + 1;
+        char quote = html[quoteStart];
+        if (quote != '"' && quote != '\'') {
+            pos = eqPos + 1;
             continue;
         }
 
-        // Filtramos recursos no-HTML y externos que no aportan al grafo
-        std::string lowerUrl = urlExtraida;
-        std::transform(lowerUrl.begin(), lowerUrl.end(), lowerUrl.begin(), ::tolower);
+        size_t quoteEnd = html.find(quote, quoteStart + 1);
+        if (quoteEnd == std::string::npos) break;
 
-        // Extensiones comunes que ignoramos
-        std::unordered_set<std::string> extensionesNoHtml = {
-            ".js", ".css", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".woff", ".woff2", ".ttf",
-            ".pdf", ".ico", ".eot", ".otf", ".mp3", ".mp4", ".zip", ".rar", ".exe"
-        };
+        std::string urlRaw = html.substr(quoteStart + 1, quoteEnd - quoteStart - 1);
 
-        size_t ultimoPunto = lowerUrl.find_last_of('.');
-        if (ultimoPunto != std::string::npos) {
-            std::string ext = lowerUrl.substr(ultimoPunto);
-            if (extensionesNoHtml.count(ext)) {
-                posicion = finUrl + 1;
-                continue;
-            }
+        pos = quoteEnd + 1;  // Avanzar para el siguiente
+
+        // === PASO 3: Usar tus métodos de filtro ===
+        if (!esEnlaceValido(urlRaw)) continue;
+        if (esRecursoEstatico(urlRaw)) continue;
+
+        std::string normalized = normalizarURL(urlRaw, base_url);
+
+        // Usa tu método perteneceAlDominio o esMismoDominio
+        if (esMismoDominio(normalized)) {
+            enlacesExtraidos.push_back(normalized);
         }
-
-        // También ignoramos dominios externos de fuentes/CDN
-        if (lowerUrl.find("fonts.googleapis") != std::string::npos ||
-            lowerUrl.find("cdn.jsdelivr") != std::string::npos ||
-            lowerUrl.find("cdnjs.cloudflare") != std::string::npos ||
-            lowerUrl.find("ajax.googleapis") != std::string::npos ||
-            lowerUrl.find("stackpath.bootstrapcdn") != std::string::npos) {
-            posicion = finUrl + 1;
-            continue;
-        }
-
-        // Normalizamos y verificamos dominio
-        std::string urlNormalizada = normalizarURL(urlExtraida, base_url);
-        if (!urlNormalizada.empty()) {
-            std::cout << "DEBUG: URL normalizada: " << urlNormalizada << "\n";
-            if (esMismoDominio(urlNormalizada)) {
-                std::cout << "DEBUG: ACEPTADO (mismo dominio)\n";
-                enlacesUnicos.insert(urlNormalizada);
-            } else {
-                std::cout << "DEBUG: RECHAZADO (dominio diferente)\n";
-            }
-        }
-        // Avanzamos después de la comilla de cierre
-        posicion = finUrl + 1;
     }
 
-    // Convertimos el set a vector para devolver
-    return {enlacesUnicos.begin(), enlacesUnicos.end()};
+    return enlacesExtraidos;
 }
 
 /**
@@ -177,31 +141,29 @@ std::string ProcesadorEnlaces::normalizarURL(const std::string& url, const std::
     return base_url + urlSinEspacios;
 }; 
 
-    void ProcesadorEnlaces::setDominioBase(const std::string& dominio) {
-        dominioBase = extraerDominio(dominio);  // normalizamos
-    }
-
 bool ProcesadorEnlaces::esMismoDominio(const std::string& url) {
-    std::string host = extraerDominio(url);
+    try {
+        std::string dominioExtraido = normalizarDominio(extraerDominio(url));
+        std::string dominioBaseNormalizado = normalizarDominio(dominioBase);
 
-    if (host.empty()) return false;
+        // Exactamente el mismo dominio
+        if (dominioExtraido == dominioBaseNormalizado) {
+            return true;
+        }
 
-    // dominioBase ya viene limpio (sin www., en minúsculas) porque lo seteamos con extraerDominio
-    std::string base = dominioBase;
-    if (base.empty()) return false;
+        // Subdominios válidos (moodle.uneg.edu.ve, servicio.uneg.edu.ve, etc.)
+        if (dominioExtraido.size() > dominioBaseNormalizado.size() &&
+            dominioExtraido.find("." + dominioBaseNormalizado) != std::string::npos) {
+            return true;
+        }
 
-    // Caso 1: exactamente igual
-    if (host == base) return true;
-
-    // Caso 2: subdominio (termina con .base)
-    std::string sufijo = "." + base;
-    if (host.size() > sufijo.size() &&
-        host.compare(host.size() - sufijo.size(), sufijo.size(), sufijo) == 0) {
-        return true;
+        return false;
     }
-
-    return false;
+    catch (...) {
+        return false;
+    }
 }
+
 
 /**
  * @brief Extrae el dominio principal de una URL.
@@ -244,4 +206,57 @@ std::string ProcesadorEnlaces::extraerDominio(const std::string& url) {
 
     return dominio;
 }
+
+std::string ProcesadorEnlaces::normalizarDominio(const std::string& dominio) {
+    // Elimina www. si existe
+    if (dominio.find("www.") == 0) {
+        return dominio.substr(4);
+    }
+    return dominio;
+}
+
+
+/**
+ * @brief Verifica si un enlace es válido (navegable y no vacío ni especial)
+ */
+bool ProcesadorEnlaces::esEnlaceValido(const std::string& url) {
+    if (url.empty()){
+        return false;
+    }
+    if (url[0] == '#') {
+        return false;
+    }
+    
+    std::string minuscula = url;
+    std::transform(minuscula.begin(), minuscula.end(), minuscula.begin(), ::tolower);
+
+    if (minuscula.find("javascript:") == 0) return false;
+    if (minuscula.find("mailto:") != std::string::npos) return false;
+    if (minuscula.find("tel:") != std::string::npos) return false;
+
+    return true;
+}
+
+/**
+ * @brief Filtra recursos estáticos comunes (CSS, JS, imágenes)
+ */
+bool ProcesadorEnlaces::esRecursoEstatico(const std::string& url) {
+    std::string minuscula = url;
+    std::transform(minuscula.begin(), minuscula.end(), minuscula.begin(), ::tolower);
+
+    return minuscula.find(".css") != std::string::npos ||
+           minuscula.find(".js") != std::string::npos ||
+           minuscula.find(".ico") != std::string::npos ||
+           minuscula.find(".png") != std::string::npos ||
+           minuscula.find(".jpg") != std::string::npos;
+}
+
+/**
+ * @brief Verifica si la URL pertenece al dominio base
+ */
+bool ProcesadorEnlaces::perteneceAlDominio(const std::string& url) {
+    return extraerDominio(url) == dominioBase;
+}
+
+
 

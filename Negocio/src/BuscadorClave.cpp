@@ -1,4 +1,6 @@
 #include "../include/BuscadorClave.h"
+#include <algorithm> 
+
 
 #include<iostream>
 
@@ -8,6 +10,45 @@ bool BuscadorClave::validarPaginaInicial(const std::string& paginaInicial) const
         return false;  // No existe la página inicial
     }
     return true;
+}
+
+void BuscadorClave::imprimirCamino(const std::vector<std::string>& camino) const {
+    if (camino.empty()) {
+        std::cout << "\033[31mNo se encontró camino.\033[0m\n";  // Rojo
+        return;
+    }
+
+    // Título en verde
+    std::cout << "\033[32mCamino encontrado:\033[0m\n";
+
+    for (size_t i = 0; i < camino.size(); ++i) {
+        std::string url = camino[i];
+
+        // Limpieza de la URL para que sea más legible
+        if (url.find("https://www.") == 0) {
+            url = url.substr(12);  // Quita https://www.
+        } else if (url.find("https://") == 0) {
+            url = url.substr(8);   // Quita https://
+        } else if (url.find("http://") == 0) {
+            url = url.substr(7);   // Quita http:// (poco común pero posible)
+        }
+
+        // Quitar barra final si existe
+        if (!url.empty() && url.back() == '/') {
+            url.pop_back();
+        }
+
+        // Imprimir URL en cian
+        std::cout << "\033[36m" << url << "\033[0m";
+
+        // Flecha en amarillo (solo entre elementos)
+        if (i < camino.size() - 1) {
+            std::cout << " \033[33m ->\033[0m ";
+        }
+    }
+
+    // Fin en verde
+    std::cout << " \033[32m(fin)\033[0m\n";
 }
 
 std::pair<bool, std::string> BuscadorClave::ejecutarBFSParaClave(
@@ -25,7 +66,6 @@ std::pair<bool, std::string> BuscadorClave::ejecutarBFSParaClave(
         std::string paginaActual = cola.front();
         cola.pop();
 
-        // ¡Encontramos la página objetivo!
         if (paginaActual.find(palabraClave) != std::string::npos) {
             return {true, paginaActual};
         }
