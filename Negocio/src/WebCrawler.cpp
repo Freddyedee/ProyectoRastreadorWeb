@@ -25,42 +25,43 @@
  * @param maxProfundidad  Profundidad máxima de rastreo.
  * @param maxPaginas  Número máximo de páginas a rastrear.
  */
-void WebCrawler::rastrear(const std::string& urlInicial, 
-                          int maxProfundidad, 
-                          int maxPaginas, 
-                          GrafoWeb& grafoDestino) 
-{
-    // PASO 1: Inicializa el dominio base
+void WebCrawler::rastrear(const std::string& urlInicial, int maxProfundidad, int maxPaginas) {
+    // Validación inicial: URL inicial debe ser válida y no vacía
+    if (urlInicial.empty() || urlInicial.find("http") != 0) {
+        throw std::invalid_argument("URL inicial inválida. Debe empezar con http/https.");
+    }
+
+    // 1. Preparación inicial
     ProcesadorEnlaces procesador(urlInicial);
     ComunicacionHTTP comunicacion;
 
-    this->dominio = procesador.extraerDominio(urlInicial);  // ← asignamos a miembro
-
-    // Quitamos "www." si existe (para normalizar)
+    this->dominio = procesador.extraerDominio(urlInicial);
     if (this->dominio.find("www.") == 0) {
         this->dominio = this->dominio.substr(4);
     }
 
-    // PASO 2: Limpia el grafo destino
-    grafoDestino.limpiar();  // ← asumo que tienes un método limpiar() en GrafoWeb
-                             // si no, implementa: adyacencias.clear();
+    // 2. Limpiamos el grafo
+    this->grafo.clear();
 
-    // Estructura BFS
-    std::queue<std::pair<std::string, int>> paginasPendientes;
-    std::unordered_set<std::string> paginasVisitadas;
+    // 3. Estructuras para BFS (usaremos URLs normalizadas para evitar duplicados)
+    std::queue<std::pair<std::string, int>> paginasPendientes;  // {url_norm, profundidad}
+    std::unordered_set<std::string> paginasVisitadas;           // Almacena URLs normalizadas
 
-    // Inicialización del nodo raíz
-    paginasPendientes.push({urlInicial, 0});
-    paginasVisitadas.insert(urlInicial);
+    // 4. Normalizamos y agregamos nodo inicial
+    std::string inicialNorm = procesador.normalizarURL(urlInicial, urlInicial);
+    if (inicialNorm.empty()) {
+        std::cerr << "URL inicial no pudo normalizarse.\n";
+        return;
+    }
 
-    grafoDestino.agregarNodo(urlInicial);  // ← importante: agregamos el nodo inicial
+    paginasPendientes.push({inicialNorm, 0});
+    paginasVisitadas.insert(inicialNorm);
+    this->grafo.agregarNodo(inicialNorm);
 
-    grafo.agregarNodo(urlInicial); //inicializa el grafo con la url inicial
-    
-    int visitadasCount = 1; //contador de paginas visitadas
-    //se inicializa en 1 porque la url inicial ya se cuenta como visitada
+    int paginasProcesadas = 1;
 
-    while (!paginasPendientes.empty() && visitadasCount < maxPaginas) {
+    // 5. BFS principal
+    while (!paginasPendientes.empty() && paginasProcesadas < maxPaginas) {
         auto [urlActual, profundidadActual] = paginasPendientes.front();
         paginasPendientes.pop();
 
@@ -68,40 +69,68 @@ void WebCrawler::rastrear(const std::string& urlInicial,
             continue;
         }
 
-        // PASO 3: Descargar HTML
-        std::string html = comunicacion.descargarPagina(urlActual);
+        // Descargamos la página con manejo de errores
+        std::string html;
+        try {
+            html = comunicacion.descargarPagina(urlActual);
+        } catch (const std::exception& e) {
+            std::cerr << "Error descargando " << urlActual << ": " << e.what() << "\n";
+            continue;
+        }
+
         if (html.empty()) {
             continue;
         }
 
-        // PASO 4: Extraer enlaces
+        // Extraemos enlaces
         std::vector<std::string> enlaces = procesador.extraerEnlaces(html, urlActual);
 
-            //verifica si el enlace ya fue visitado
-            if(paginasVisitadas.find(enlace) == paginasVisitadas.end()){ // si no ha sido visitada
-                paginasVisitadas.insert(enlace); // marca el enlace como visitado
-                paginasPendientes.push(std::make_pair(enlace, profundidadActual + 1)); 
-                //inserta el nuevo enlace en la cola con profundidad incrementada
-                //al hacer esto incrementamos la profundidad para reflejar el nivel de exploracion
-                
-                grafo.agregarArista(urlActual, enlace); 
+        for (const std::string& enlace : enlaces) {
+            // Normalizamos primero
+            std::string enlaceNorm = procesador.normalizarURL(enlace, urlActual);
+            if (enlaceNorm.empty()) continue;
 
-                // Agregamos al grafo usando los métodos de GrafoWeb
-                grafoDestino.agregarArista(urlActual, enlace);
-                grafoDestino.agregarNodo(enlace);  // por si no existe aún
+            // FILTROS: descartamos lo más rápido posible
+            if (enlaceNorm.find('#') == 0) continue;  // anclas
 
-                visitadasCount++;
+            // Plantillas no resueltas (placeholders de CMS)
+            if (enlaceNorm.find("${") != std::string::npos || 
+                enlaceNorm.find("{{") != std::string::npos) continue;
 
-                if (visitadasCount >= maxPaginas) {
+            // Enlaces no válidos (javascript:, mailto:, tel:, etc.)
+            if (!procesador.esEnlaceValido(enlaceNorm)) continue;
+
+            // Recursos estáticos: PDFs, css, js, imágenes, etc.
+            if (procesador.esRecursoEstatico(enlaceNorm)) continue;
+
+            // Solo enlaces del mismo dominio
+            if (!procesador.perteneceAlDominio(enlaceNorm)) continue;
+
+            // Si pasó todos los filtros → agregamos si no visitado
+            if (paginasVisitadas.find(enlaceNorm) == paginasVisitadas.end()) {
+                paginasVisitadas.insert(enlaceNorm);
+                paginasPendientes.push({enlaceNorm, profundidadActual + 1});
+
+                // Agregamos al grafo SOLO después de todos los filtros
+                this->grafo.agregarNodo(enlaceNorm);
+                this->grafo.agregarArista(urlActual, enlaceNorm);
+
+                paginasProcesadas++;
+
+                if (paginasProcesadas >= maxPaginas) {
                     break;
                 }
             }
         }
+
+        if (paginasProcesadas >= maxPaginas) {
+            break;
+        }
     }
 
-    std::cout << "DEBUG: Rastreo finalizado. Páginas agregadas: " 
-              << grafoDestino.obtenerGrafo().size() << "\n";
+    // Mensaje final con métricas básicas
+    std::cout << "Rastreo finalizado.\n"
+              << "  - Páginas procesadas: " << paginasProcesadas << "\n"
+              << "  - Nodos únicos en grafo: " << this->grafo.size() << "\n"
+              << "  - Dominio base: " << this->dominio << "\n";
 }
-
-
-

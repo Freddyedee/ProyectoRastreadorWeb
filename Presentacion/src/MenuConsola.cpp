@@ -1,11 +1,15 @@
+#define NOMINMAX 
+#include "../../Datos/include/GestorArchivos.h"
 #include "../include/MenuConsola.h"
 #include "../include/ProcesadorEnlaces.h"
 #include "../include/ComunicacionHTTP.h"
 #include "../include/GrafoWeb.h"
 #include "../include/WebCrawler.h"
-#include "../proyectoEstructuraDatos/Datos/include/GestorArchivos.h"
 #include "../include/AnalizadorGrafo.h"
 #include "../include/BuscadorClave.h"
+
+   // Evita que windows.h defina las macros min/max
+#include <windows.h>  // Si lo necesitas (a veces indirecto vía otros headers)
 
 #include <iostream>
 #include <limits>
@@ -175,17 +179,21 @@ void MenuConsola::probarMismoDominio() {
 
     std::string urlInicial, urlEvaluar;
 
-    std::cout << "Ingrese URL inicial (para establecer el dominio): ";
+    std::cout << "Ingrese URL inicial (para establecer el dominio base): ";
     std::cin >> urlInicial;
-    crawler.rastrear(urlInicial, 0, 1);  // Solo para fijar dominio
+
+    // En lugar de rastrear, creamos un procesador temporal solo para fijar dominio
+    ProcesadorEnlaces tempProcesador(urlInicial);
+    std::cout << "Dominio base detectado: " << tempProcesador.getDominioBase() << "\n\n";
 
     std::cout << "Ingrese URL a evaluar: ";
     std::cin >> urlEvaluar;
 
-    if (procesadorEnlaces.esMismoDominio(urlEvaluar))
+    if (tempProcesador.esMismoDominio(urlEvaluar)) {
         std::cout << "\nPertenece al mismo dominio.\n";
-    else
+    } else {
         std::cout << "\nNO pertenece al mismo dominio.\n";
+    }
 
     std::cout << "\nPresione Enter para volver al menu principal...";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -218,7 +226,7 @@ void MenuConsola::probarRastrear() {
     // Obtener referencia al mapa real del grafo
     const auto& grafoMap = crawler.getGrafo();  // Usa un nombre claro
 
-   std::cout << "Rastreo completado.\n";
+    std::cout << "Rastreo completado.\n";
     std::cout << "Paginas descubiertas: " << grafoMap.size() << "\n\n";
 
     std::cout << "================================================================================\n";
@@ -241,7 +249,7 @@ void MenuConsola::probarRastrear() {
 
     std::cout << "\nTotal de paginas en el grafo: " << grafoMap.size() << "\n";
     GestorArchivos::guardarGrafo(crawler.getGrafo(), "grafo.txt");
-    std::cout << "Grafo guardado en grafo_uneg.txt\n";
+    std::cout << "Grafo guardado en grafo.txt\n";
 
     std::cout << "\nPresione Enter para volver al menu principal...";
     std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -253,7 +261,7 @@ void MenuConsola::probarRastrear() {
 
 void MenuConsola::probarAnalizarGrafo() {
     std::cout << "--------------------------------------------------------------------------------\n";
-    std::cout << "Prueba: Analisis de grafo\n";
+    std::cout << "Prueba: Analisis de grafo generado\n";
     std::cout << "--------------------------------------------------------------------------------\n";
 
     if (crawler.getGrafo().empty()) {
@@ -263,7 +271,8 @@ void MenuConsola::probarAnalizarGrafo() {
         std::cout << "Ingrese URL inicial para calcular profundidad: ";
         std::cin >> paginaInicial;
 
-        AnalizadorGrafo analizador(crawler.getGrafo(), ""); // Dominio vacío opcional
+        // Cambia aquí: pasa crawler.dominio (o "")
+        AnalizadorGrafo analizador(crawler.getGrafo(), crawler.dominio);  // ← segundo param
         analizador.calcularMetricas(paginaInicial);
     }
 
@@ -297,28 +306,46 @@ void MenuConsola::probarBuscarCamino() {
 }
 
 void MenuConsola::probarBuscarCaminoPalabraClave() {
-    if (!analizador) {
-        std::cout << "Primero debes realizar un rastreo completo (opcion 5).\n";
+    std::cout << "--------------------------------------------------------------------------------\n";
+    std::cout << "Prueba: Busqueda de camino por palabra clave en URLs\n";
+    std::cout << "--------------------------------------------------------------------------------\n";
+
+    // Verificación principal: el grafo debe existir y no estar vacío
+    if (crawler.getGrafo().empty()) {
+        std::cout << "El grafo está vacío. Primero debes realizar un rastreo completo (opción 5).\n";
         return;
     }
 
     std::string paginaInicial;
     std::string palabraClave;
 
-    std::cout << "Ingrese la pagina inicial (ej: https://www.uneg.edu.ve): ";
+    std::cout << "Ingrese la página inicial (ej: https://www.uneg.edu.ve): ";
     std::cin >> paginaInicial;
 
-    std::cout << "Ingrese la palabra clave a buscar en la URL: ";
+    std::cout << "Ingrese la palabra clave a buscar en la URL (ej: 'admision', 'postgrado'): ";
     std::cin >> palabraClave;
 
-    std::cout << "Buscando camino...\n";
-    auto camino = analizador->buscarCaminoConPalabraClave(paginaInicial, palabraClave);
+    std::cout << "Buscando camino más corto...\n";
 
-    analizador->imprimirCamino(camino);
+    // Creamos BuscadorClave localmente (no necesita puntero ni miembro de clase)
+    BuscadorClave buscador(crawler.getGrafo());
+
+    // Llamamos al método con punto (.) porque es objeto por valor, no puntero
+    std::vector<std::string> camino = buscador.buscarCaminoConPalabraClave(paginaInicial, palabraClave);
+
+    // Imprimimos usando el método de la misma clase (consistente con probarBuscarCamino)
+    buscador.imprimirCamino(camino);
+
+    // Mensaje adicional si no se encontró camino (opcional, pero mejora UX)
+    if (camino.empty()) {
+        std::cout << "\nNo se encontró ninguna página cuya URL contenga '" << palabraClave 
+                  << "' accesible desde " << paginaInicial << ".\n";
+    }
 }
 
+// Similar para probarCalcularMetricas() si la tienes
 void MenuConsola::probarCalcularMetricas() {
-    if (!analizador) {
+    if (crawler.getGrafo().empty()) {
         std::cout << "Primero debes realizar un rastreo completo (opcion 5).\n";
         return;
     }
@@ -328,5 +355,6 @@ void MenuConsola::probarCalcularMetricas() {
     std::cin >> paginaInicial;
 
     std::cout << "Calculando metricas...\n";
-    analizador->calcularMetricas(paginaInicial);
+    AnalizadorGrafo analizador(crawler.getGrafo(), crawler.dominio);  // ← segundo param
+    analizador.calcularMetricas(paginaInicial);
 }

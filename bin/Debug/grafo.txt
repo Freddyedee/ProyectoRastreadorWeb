@@ -1,0 +1,391 @@
+GRAFO DE ENLACES - Total paginas: 100
+
+https://uneg.edu.ve/portal/postgrado/programas/no-conducentes-a-grado-academico/formacion-docente:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve:
+  -> https://www.uneg.edu.ve/
+  -> https://uneg.edu.ve/autoridades
+  -> https://uneg.edu.ve/nosotros
+  -> https://uneg.edu.ve/normas_procedimientos
+  -> https://uneg.edu.ve/reglamentos
+  -> https://uneg.edu.ve/portal/pregrado/carreras
+  -> https://uneg.edu.ve/portal/postgrado/programas
+  -> https://uneg.edu.ve/mantenimiento
+  -> https://www.uneg.edu.ve/dashboard
+  -> https://uneg.edu.ve/pregrado
+  -> https://uneg.edu.ve/admision
+  -> https://uneg.edu.ve/postgrado
+  -> https://uneg.edu.ve/extension
+  -> https://www.uneg.edu.ve/breves
+  -> https://www.uneg.edu.ve/breves/20260003
+  -> https://www.uneg.edu.ve/breves/20260002
+  -> https://www.uneg.edu.ve/breves/20260001
+  -> https://www.uneg.edu.ve/breves/20250020
+  -> https://www.uneg.edu.ve/breves/20250019
+  -> https://www.uneg.edu.ve/breves/20250018
+  -> https://www.uneg.edu.ve/breves/20250017
+  -> https://www.uneg.edu.ve/breves/20250016
+  -> https://www.uneg.edu.ve/breves/20250015
+  -> https://www.uneg.edu.ve/breves/20250014
+  -> https://www.uneg.edu.ve/breves/20250013
+  -> https://www.uneg.edu.ve/breves/20250012
+  -> https://www.uneg.edu.ve/breves/20250011
+  -> https://www.uneg.edu.ve/breves/20250010
+  -> https://www.uneg.edu.ve/breves/20250009
+  -> https://www.uneg.edu.ve/breves/20250008
+
+https://uneg.edu.ve/portal/pregrado/carreras/tsu-empresa-de-alojamiento-turistico:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250012:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250017:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas:
+  -> https://uneg.edu.ve/portal/postgrado/programas/no-conducentes-a-grado-academico/formacion-docente
+  -> https://uneg.edu.ve/portal/postgrado/programas/especializaciones/profesional-en-gestion-ambiental
+  -> https://uneg.edu.ve/portal/postgrado/programas/especializaciones/salud-ocupacional-mencion-medicina-del-trabajo
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencias-ambientales-mencion-gestion-ambiental
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencias-ambientales-mencion-ecologia-aplicada
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencia-de-los-materiales
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/cienciasde-la-educacion-mencion-procesos-de-ensenanza-y-aprendizajes
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencias-de-la-educacion-mencion-lectura-y-escritura
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/gerencia-mencion-recursos-humanos
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/gerencia-mencion-finanzas
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/gerencia-mencion-operaciones-y-produccion
+  -> https://uneg.edu.ve/portal/postgrado/programas/maestrias/tecnologia-de-la-informacion
+  -> https://uneg.edu.ve/portal/postgrado/programas/doctorados/ciencias-ambientales
+  -> https://uneg.edu.ve/portal/postgrado/programas/doctorados/ciencias-de-la-educacion
+  -> https://uneg.edu.ve/portal/postgrado/programas/doctorados/ciencias-administrativas
+  -> https://uneg.edu.ve/portal/postgrado/programas/internacionalizacion-academica/brasil-venezuela/maestria-en-ciencias-de-la-educacion-mencion-procesos-de-ensenanza-y-aprendizajes
+  -> https://uneg.edu.ve/portal/postgrado/programas/internacionalizacion-academica/brasil-venezuela/doctorado-en-ciencias-de-la-educacion
+  -> https://uneg.edu.ve/portal/postgrado/programas/internacionalizacion-academica/ecuador-venezuela/doctorado-en-ciencias-de-la-educacion
+
+https://uneg.edu.ve/autoridades/1:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras:
+  -> https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-industrial
+  -> https://uneg.edu.ve/portal/pregrado/carreras/licenciatura-en-gestion-de-alojamiento-turistico
+  -> https://uneg.edu.ve/portal/pregrado/carreras/licenciatura-en-ciencias-ambientales
+  -> https://uneg.edu.ve/portal/pregrado/carreras/educacion-integral
+  -> https://uneg.edu.ve/portal/pregrado/carreras/educacion-mencion-educacion-fisica-deporte-y-recreacion
+  -> https://uneg.edu.ve/portal/pregrado/carreras/educacion-mencion-lengua-y-literatura
+  -> https://uneg.edu.ve/portal/pregrado/carreras/educacion-mencion-matematica
+  -> https://uneg.edu.ve/portal/pregrado/carreras/educacion-en-ciencias-quimica-fisica-y-biologia
+  -> https://uneg.edu.ve/portal/pregrado/carreras/administracion-de-empresas
+  -> https://uneg.edu.ve/portal/pregrado/carreras/administracion-de-banca-y-finanzas
+  -> https://uneg.edu.ve/portal/pregrado/carreras/ciencias-fiscales
+  -> https://uneg.edu.ve/portal/pregrado/carreras/contaduria-publica
+  -> https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-en-informatica
+  -> https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-en-materiales
+  -> https://uneg.edu.ve/portal/pregrado/carreras/tsu-empresa-de-alojamiento-turistico
+  -> https://uneg.edu.ve/portal/pregrado/carreras/tsu-en-turismo
+  -> https://uneg.edu.ve/portal/pregrado/carreras/tecnologia-en-produccion-agropecuaria
+  -> https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-produccion-animal
+  -> https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-en-industrias-forestales
+
+https://uneg.edu.ve/reglamentos:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/educacion-mencion-educacion-fisica-deporte-y-recreacion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-produccion-animal:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250018:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/autoridades:
+  -> https://uneg.edu.ve/
+  -> https://uneg.edu.ve/autoridades/1
+  -> https://uneg.edu.ve/autoridades/2
+  -> https://uneg.edu.ve/autoridades/3
+  -> https://uneg.edu.ve/autoridades/4
+  -> https://uneg.edu.ve/autoridades/5
+  -> https://uneg.edu.ve/autoridades/6
+  -> https://uneg.edu.ve/autoridades/8
+
+https://uneg.edu.ve/nosotros:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/:
+  -> https://uneg.edu.ve/breves
+  -> https://uneg.edu.ve/breves/20260003
+  -> https://uneg.edu.ve/breves/20260002
+  -> https://uneg.edu.ve/breves/20260001
+  -> https://uneg.edu.ve/breves/20250020
+  -> https://uneg.edu.ve/breves/20250019
+  -> https://uneg.edu.ve/breves/20250018
+  -> https://uneg.edu.ve/breves/20250017
+  -> https://uneg.edu.ve/breves/20250016
+  -> https://uneg.edu.ve/breves/20250015
+  -> https://uneg.edu.ve/breves/20250014
+  -> https://uneg.edu.ve/breves/20250013
+  -> https://uneg.edu.ve/breves/20250012
+  -> https://uneg.edu.ve/breves/20250011
+  -> https://uneg.edu.ve/breves/20250010
+
+https://www.uneg.edu.ve/breves/20250013:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/normas_procedimientos:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/mantenimiento:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250019:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/dashboard:
+  -> https://www.uneg.edu.ve/login
+
+https://www.uneg.edu.ve/breves/20250009:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/pregrado:
+  -> https://uneg.edu.ve/horarios
+
+https://uneg.edu.ve/autoridades/8:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/admision:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/autoridades/5:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/postgrado:
+  -> https://uneg.edu.ve/centros-de-investigacion
+
+https://uneg.edu.ve/portal/extension/coordinacion-de-deporte-y-recreacion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/extension:
+  -> https://uneg.edu.ve/portal/extension/coordinacion-general-del-programa-educacion-comunitaria
+  -> https://uneg.edu.ve/portal/extension/coordinacion-de-educacion-permanente
+  -> https://uneg.edu.ve/portal/extension/coordinacion-de-deporte-y-recreacion
+  -> https://uneg.edu.ve/portal/extension/coordinacion-desarrollo-humano-y-participacion-comunitaria
+  -> https://uneg.edu.ve/portal/extension/coordinacion-de-extension-y-difusion-cultural
+
+https://www.uneg.edu.ve/breves/20250017:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves:
+  -> https://www.uneg.edu.ve/breves?page=2
+
+https://www.uneg.edu.ve/breves/20260003:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250016:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20260002:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250015:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20260001:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250020:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250019:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250014:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250011:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencias-ambientales-mencion-ecologia-aplicada:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-en-materiales:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-en-informatica:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250010:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250018:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves/20250008:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/autoridades/2:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/autoridades/3:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/tecnologia-en-produccion-agropecuaria:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/autoridades/4:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/educacion-en-ciencias-quimica-fisica-y-biologia:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/autoridades/6:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-industrial:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/breves?page=2:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/licenciatura-en-gestion-de-alojamiento-turistico:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencia-de-los-materiales:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/licenciatura-en-ciencias-ambientales:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/educacion-integral:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/educacion-mencion-lengua-y-literatura:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/educacion-mencion-matematica:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/administracion-de-empresas:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/administracion-de-banca-y-finanzas:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/ciencias-fiscales:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/contaduria-publica:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/especializaciones/profesional-en-gestion-ambiental:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/tsu-en-turismo:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/pregrado/carreras/ingenieria-en-industrias-forestales:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/especializaciones/salud-ocupacional-mencion-medicina-del-trabajo:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencias-ambientales-mencion-gestion-ambiental:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/cienciasde-la-educacion-mencion-procesos-de-ensenanza-y-aprendizajes:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/ciencias-de-la-educacion-mencion-lectura-y-escritura:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/gerencia-mencion-recursos-humanos:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/tecnologia-de-la-informacion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/gerencia-mencion-finanzas:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/maestrias/gerencia-mencion-operaciones-y-produccion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/doctorados/ciencias-ambientales:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/doctorados/ciencias-de-la-educacion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/doctorados/ciencias-administrativas:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/internacionalizacion-academica/brasil-venezuela/maestria-en-ciencias-de-la-educacion-mencion-procesos-de-ensenanza-y-aprendizajes:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/internacionalizacion-academica/brasil-venezuela/doctorado-en-ciencias-de-la-educacion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/postgrado/programas/internacionalizacion-academica/ecuador-venezuela/doctorado-en-ciencias-de-la-educacion:
+  (sin enlaces salientes)
+
+https://www.uneg.edu.ve/login:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/horarios:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/centros-de-investigacion:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/extension/coordinacion-general-del-programa-educacion-comunitaria:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/extension/coordinacion-de-educacion-permanente:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/extension/coordinacion-desarrollo-humano-y-participacion-comunitaria:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/portal/extension/coordinacion-de-extension-y-difusion-cultural:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20260003:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20260002:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20260001:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250020:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250016:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250015:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250014:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250013:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250012:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250011:
+  (sin enlaces salientes)
+
+https://uneg.edu.ve/breves/20250010:
+  (sin enlaces salientes)
+

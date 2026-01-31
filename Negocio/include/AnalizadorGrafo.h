@@ -8,14 +8,11 @@
 #include <unordered_set>     // Para guardar cosas unicas sin repetir (como lista sin duplicados)
 #include <vector>            // Para guardar listas de cosas (como array que crece solo)
 #include <algorithm>         // Para funciones utiles como transformar texto
-#include "../include/ProcesadorEnlaces.h"
-//#define NOMINMAX  depnde de la version de msys64 y mingw64 
-
 
 class AnalizadorGrafo {
 private:
     const std::unordered_map<std::string, std::vector<std::string>>& grafo;
-    ProcesadorEnlaces procesador;
+    std::string dominioBase;  // Opcional: guardamos solo el string base para validaciones simples
 
     // Calcula total de páginas y grado promedio
     std::pair<int, double> calcularTotalPaginasYGradoPromedio() const;
@@ -31,12 +28,14 @@ private:
                          int profundidadMaxima, size_t numSubdominios,
                          int diametroAproximado) const;
 
+    // Función auxiliar privada para extraer dominio (lógica mínima, sin dependencias externas)
+    std::string extraerDominioSimple(const std::string& url) const;
+
 public:
     explicit AnalizadorGrafo(
         const std::unordered_map<std::string, std::vector<std::string>>& g,
         const std::string& dominioBase = "")
-        : grafo(g), procesador(dominioBase) {}
-
+        : grafo(g), dominioBase(dominioBase) {}
 
     void calcularMetricas(const std::string& paginaInicial);
 };

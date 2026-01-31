@@ -65,8 +65,10 @@ std::string ComunicacionHTTP::descargarPagina(const std::string& url) {
     // Asociacion del buffer de destino 
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &contenidoPagina);
 
-    // Definicion de uin tiempo de espera para la operacion
-    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 8L); // 8 segundos de timeout
+    // Definicion de un tiempo de espera para la operacion
+    curl_easy_setopt(curl, CURLOPT_TIMEOUT, 30L); // 30 segundos de timeout
+
+    curl_easy_setopt(curl, CURLOPT_CONNECTTIMEOUT, 15L);   // 15s para conectar
 
     //ejecuta la solicitud HTTP
     CURLcode ejecucionHttp = curl_easy_perform(curl); 

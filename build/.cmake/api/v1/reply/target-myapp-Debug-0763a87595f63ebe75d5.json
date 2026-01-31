@@ -2,17 +2,10 @@
 	"artifacts" : 
 	[
 		{
-<<<<<<<< HEAD:build/.cmake/api/v1/reply/target-myapp-Release-e6ed61092228408289d3.json
-			"path" : "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Release/MyCurlApp.exe"
+			"path" : "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Debug/Rastreador.exe"
 		},
 		{
-			"path" : "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Release/MyCurlApp.pdb"
-========
-			"path" : "C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/Rastreador.exe"
-		},
-		{
-			"path" : "C:/Users/USER/Desktop/proyectoEstructuraDatos/bin/Rastreador.pdb"
->>>>>>>> e0c197144bf6e69bf8aca45a22d3392637f979f5:build/.cmake/api/v1/reply/target-myapp-Debug-ee4335bbce34ad9813a7.json
+			"path" : "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Debug/Rastreador.pdb"
 		}
 	],
 	"backtrace" : 2,
@@ -38,46 +31,25 @@
 			{
 				"command" : 1,
 				"file" : 1,
-				"line" : 115,
+				"line" : 117,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-<<<<<<<< HEAD:build/.cmake/api/v1/reply/target-myapp-Release-e6ed61092228408289d3.json
 				"line" : 612,
 				"parent" : 1
 			},
 			{
 				"command" : 2,
 				"file" : 1,
-				"line" : 133,
-========
-				"line" : 116,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 134,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 152,
->>>>>>>> e0c197144bf6e69bf8aca45a22d3392637f979f5:build/.cmake/api/v1/reply/target-myapp-Debug-ee4335bbce34ad9813a7.json
+				"line" : 135,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
-<<<<<<<< HEAD:build/.cmake/api/v1/reply/target-myapp-Release-e6ed61092228408289d3.json
 				"file" : 1,
-				"line" : 123,
-========
-				"file" : 0,
-				"line" : 124,
->>>>>>>> e0c197144bf6e69bf8aca45a22d3392637f979f5:build/.cmake/api/v1/reply/target-myapp-Debug-ee4335bbce34ad9813a7.json
+				"line" : 125,
 				"parent" : 0
 			}
 		]
@@ -88,7 +60,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -std:c++17 -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -std:c++17 -MDd"
 				}
 			],
 			"includes" : 
@@ -124,13 +96,9 @@
 				3,
 				4,
 				5,
-<<<<<<<< HEAD:build/.cmake/api/v1/reply/target-myapp-Release-e6ed61092228408289d3.json
-				6
-========
 				6,
 				7,
 				8
->>>>>>>> e0c197144bf6e69bf8aca45a22d3392637f979f5:build/.cmake/api/v1/reply/target-myapp-Debug-ee4335bbce34ad9813a7.json
 			]
 		}
 	],
@@ -146,11 +114,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /GR /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-static-libgcc -static-libstdc++ /INCREMENTAL:NO",
+				"fragment" : "-static-libgcc -static-libstdc++ /debug /INCREMENTAL",
 				"role" : "flags"
 			},
 			{
@@ -159,7 +127,7 @@
 			},
 			{
 				"backtrace" : 3,
-				"fragment" : "C:\\Users\\usuario\\vcpkg\\installed\\x64-windows\\lib\\libcurl.lib",
+				"fragment" : "C:\\Users\\usuario\\vcpkg\\installed\\x64-windows\\debug\\lib\\libcurl-d.lib",
 				"role" : "libraries"
 			},
 			{
@@ -188,13 +156,9 @@
 				3,
 				4,
 				5,
-<<<<<<<< HEAD:build/.cmake/api/v1/reply/target-myapp-Release-e6ed61092228408289d3.json
-				6
-========
 				6,
 				7,
 				8
->>>>>>>> e0c197144bf6e69bf8aca45a22d3392637f979f5:build/.cmake/api/v1/reply/target-myapp-Debug-ee4335bbce34ad9813a7.json
 			]
 		}
 	],
@@ -203,23 +167,7 @@
 		{
 			"backtrace" : 2,
 			"compileGroupIndex" : 0,
-<<<<<<<< HEAD:build/.cmake/api/v1/reply/target-myapp-Release-e6ed61092228408289d3.json
-			"path" : "pruebas.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "Negocio/src/AnalizadorGrafo.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 2,
-			"compileGroupIndex" : 0,
-			"path" : "Presentacion/src/MenuConsola.cpp",
-========
 			"path" : "Rastreador.cpp",
->>>>>>>> e0c197144bf6e69bf8aca45a22d3392637f979f5:build/.cmake/api/v1/reply/target-myapp-Debug-ee4335bbce34ad9813a7.json
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -247,25 +195,25 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 1,
+			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "Negocio/src/BuscadorClave.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 1,
+			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "Negocio/src/AnalizadorGrafo.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 1,
+			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "Datos/src/GestorArchivos.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
-			"backtrace" : 1,
+			"backtrace" : 2,
 			"compileGroupIndex" : 0,
 			"path" : "Presentacion/src/MenuConsola.cpp",
 			"sourceGroupIndex" : 0

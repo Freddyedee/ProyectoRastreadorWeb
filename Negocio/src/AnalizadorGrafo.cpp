@@ -2,7 +2,6 @@
 #include <iostream> 
 #include <iomanip>
 
-
 void AnalizadorGrafo::calcularMetricas(const std::string& paginaInicial)
 {
     if (grafo.empty()) {
@@ -46,7 +45,7 @@ std::unordered_set<std::string> AnalizadorGrafo::calcularSubdominiosUnicos()
     std::unordered_set<std::string> subdominiosUnicos;
 
     for (const auto& [url, enlaces] : grafo) {
-        std::string dominio = procesador.extraerDominio(url);
+        std::string dominio = extraerDominioSimple(url);
         size_t posPunto = dominio.find('.');
         if (posPunto != std::string::npos) {
             std::string sub = dominio.substr(0, posPunto);
@@ -105,4 +104,38 @@ void AnalizadorGrafo::mostrarMetricas(int totalPaginas, double gradoPromedio,
     std::cout << "- Número de subdominios únicos:         " << numSubdominios << "\n";
     std::cout << "- Diámetro aproximado:                  " << diametroAproximado << "\n";
     std::cout << "----------------------------------------\n";
+}
+
+std::string AnalizadorGrafo::extraerDominioSimple(const std::string& url) const {
+    if (url.empty()) return "";
+
+    size_t inicio = url.find("://");
+    if (inicio == std::string::npos) {
+        inicio = 0;
+    } else {
+        inicio += 3;  // Saltamos ://
+    }
+
+    size_t fin = url.find('/', inicio);
+    if (fin == std::string::npos) {
+        fin = url.size();
+    }
+
+    std::string dominio = url.substr(inicio, fin - inicio);
+
+    // Quitamos puerto si existe (:8080)
+    size_t puerto = dominio.find(':');
+    if (puerto != std::string::npos) {
+        dominio = dominio.substr(0, puerto);
+    }
+
+    // Quitamos "www." al inicio si existe
+    if (dominio.size() > 4 && dominio.substr(0, 4) == "www.") {
+        dominio = dominio.substr(4);
+    }
+
+    // Todo a minúsculas
+    std::transform(dominio.begin(), dominio.end(), dominio.begin(), ::tolower);
+
+    return dominio;
 }

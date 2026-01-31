@@ -14,7 +14,6 @@ class MenuConsola {
 
 private:
     WebCrawler crawler;
-    AnalizadorGrafo* analizador = nullptr;  // Se crea después de rastrear
     ComunicacionHTTP comunicacionHttp; 
     ProcesadorEnlaces procesadorEnlaces; 
     std::string ultimaUrlRastreada;

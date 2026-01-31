@@ -62,25 +62,25 @@
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">myapp.dir\Debug\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MyCurlApp</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rastreador</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">myapp.dir\Release\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MyCurlApp</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rastreador</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">myapp.dir\MinSizeRel\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">MyCurlApp</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Rastreador</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">myapp.dir\RelWithDebInfo\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">MyCurlApp</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Rastreador</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
@@ -125,7 +125,7 @@
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Debug/MyCurlApp.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/debug/bin -OutVariable out
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Debug/Rastreador.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/debug/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -142,9 +142,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/Debug/MyCurlApp.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/Debug/Rastreador.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Debug/MyCurlApp.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Debug/Rastreador.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -193,7 +193,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Release/MyCurlApp.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/bin -OutVariable out
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Release/Rastreador.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -210,9 +210,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/Release/MyCurlApp.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/Release/Rastreador.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Release/MyCurlApp.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/Release/Rastreador.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -261,7 +261,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/MinSizeRel/MyCurlApp.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/bin -OutVariable out
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/MinSizeRel/Rastreador.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -278,9 +278,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/MinSizeRel/MyCurlApp.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/MinSizeRel/Rastreador.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/MinSizeRel/MyCurlApp.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/MinSizeRel/Rastreador.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -328,7 +328,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <PostBuildEvent>
       <Message></Message>
       <Command>setlocal
-C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/RelWithDebInfo/MyCurlApp.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/bin -OutVariable out
+C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noprofile -executionpolicy Bypass -file C:/Users/usuario/vcpkg/scripts/buildsystems/msbuild/applocal.ps1 -targetBinary "C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/RelWithDebInfo/Rastreador.exe" -installedDir C:/Users/usuario/vcpkg/installed/x64-windows/bin -OutVariable out
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -345,9 +345,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <ImageHasSafeExceptionHandlers></ImageHasSafeExceptionHandlers>
-      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/RelWithDebInfo/MyCurlApp.lib</ImportLibrary>
+      <ImportLibrary>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/RelWithDebInfo/Rastreador.lib</ImportLibrary>
       <LinkErrorReporting></LinkErrorReporting>
-      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/RelWithDebInfo/MyCurlApp.pdb</ProgramDataBaseFile>
+      <ProgramDataBaseFile>C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/bin/RelWithDebInfo/Rastreador.pdb</ProgramDataBaseFile>
       <RandomizedBaseAddress></RandomizedBaseAddress>
       <SubSystem>Console</SubSystem>
     </Link>
@@ -413,13 +413,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\pruebas.cpp" />
-    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\AnalizadorGrafo.cpp" />
-    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Presentacion\src\MenuConsola.cpp" />
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Rastreador.cpp" />
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\ComunicacionHTTP.cpp" />
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\GrafoWeb.cpp" />
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\ProcesadorEnlaces.cpp" />
     <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\WebCrawler.cpp" />
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\BuscadorClave.cpp" />
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\AnalizadorGrafo.cpp" />
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Datos\src\GestorArchivos.cpp" />
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Presentacion\src\MenuConsola.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

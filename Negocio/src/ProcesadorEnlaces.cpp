@@ -84,7 +84,6 @@ std::vector<std::string> ProcesadorEnlaces::extraerEnlaces(const std::string& ht
 
         std::string normalized = normalizarURL(urlRaw, base_url);
 
-        // Usa tu método perteneceAlDominio o esMismoDominio
         if (esMismoDominio(normalized)) {
             enlacesExtraidos.push_back(normalized);
         }
@@ -105,41 +104,180 @@ std::vector<std::string> ProcesadorEnlaces::extraerEnlaces(const std::string& ht
  */
 
 std::string ProcesadorEnlaces::normalizarURL(const std::string& url, const std::string& base_url) {
-   
-    //limpiar posibles espacios en blanco al ingresar el url 
-
-    size_t inicio = url.find_first_not_of(" \t\n\r");
-    if(inicio == std::string::npos){
-        return ""; // La URL está vacía o solo contiene espacios en blanco
+    if (url.empty()) {
+        return "";
     }
 
-    std::string urlSinEspacios = url.substr(inicio);
-    // Caso 1: URL absoluta
-    if(urlSinEspacios.find("http://") == 0 || urlSinEspacios.find("https://") == 0){
-        return urlSinEspacios; 
+    // 1. Limpiar espacios en blanco al inicio y final
+    size_t start = url.find_first_not_of(" \t\n\r");
+    if (start == std::string::npos) {
+        return "";
+    }
+    size_t end = url.find_last_not_of(" \t\n\r");
+    std::string rel = url.substr(start, end - start + 1);
+
+    // Si es absoluta, retornamos directamente después de limpiarla
+    if (rel.find("http://") == 0 || rel.find("https://") == 0) {
+        return limpiarURLAbsoluta(rel);
     }
 
-    // Caso 1.5: Protocol relative (empieza con //)
-    if(urlSinEspacios.find("//") == 0){
-        return "https:" + urlSinEspacios;
+    // 2. Caso protocolo relativo: //dominio/...
+    if (rel.size() >= 2 && rel.substr(0, 2) == "//") {
+        return limpiarURLAbsoluta("https:" + rel);
     }
 
-    // Caso 2: Enlace relativo a la raíz (empieza con /)
-    if(!urlSinEspacios.empty() && urlSinEspacios[0] == '/'){
-        // Necesitamos el "host" base (ej: https://es.wikipedia.org)
-        // Buscamos el tercer '/' después de https://
-        size_t corte = base_url.find('/', 8); 
-        std::string host = (corte == std::string::npos) ? base_url : base_url.substr(0, corte);
-        return host + urlSinEspacios;
+    // 3. Si no hay base_url válida, devolvemos el relativo tal cual
+    if (base_url.empty() || base_url.find("://") == std::string::npos) {
+        return rel;
     }
 
-    // Caso 3: Enlace relativo simple
-    // Si base_url no termina en '/', añadirlo
-    if (base_url.back() != '/') {
-        return base_url + "/" + urlSinEspacios;
+    // 4. Extraemos componentes de la base_url
+    size_t scheme_end = base_url.find("://");
+    std::string scheme = base_url.substr(0, scheme_end + 3);  // http:// o https://
+
+    size_t authority_start = scheme_end + 3;
+    size_t path_start = base_url.find('/', authority_start);
+    if (path_start == std::string::npos) path_start = base_url.size();
+
+    std::string authority = base_url.substr(authority_start, path_start - authority_start);
+    std::string base_path = (path_start < base_url.size()) ? base_url.substr(path_start) : "/";
+
+    // 5. Resolvemos el path relativo
+    std::string result_path;
+
+    if (rel.empty()) {
+        result_path = base_path;
     }
-    return base_url + urlSinEspacios;
-}; 
+    else if (rel[0] == '/') {
+        // Ruta absoluta desde la raíz
+        result_path = rel;
+    }
+    else {
+        // Ruta relativa: combinamos con el path base
+        size_t last_slash = base_path.find_last_of('/');
+        if (last_slash != std::string::npos) {
+            result_path = base_path.substr(0, last_slash + 1) + rel;
+        } else {
+            result_path = "/" + rel;
+        }
+    }
+
+    // 6. Resolvemos los segmentos . y .. (dot segments)
+    std::vector<std::string> segments;
+    size_t pos = 0;
+    while (pos < result_path.size()) {
+        size_t next = result_path.find('/', pos);
+        if (next == std::string::npos) next = result_path.size();
+
+        std::string segment = result_path.substr(pos, next - pos);
+
+        if (segment == "." || segment.empty()) {
+            // Ignorar . y segmentos vacíos
+        }
+        else if (segment == "..") {
+            if (!segments.empty()) {
+                segments.pop_back();
+            }
+        }
+        else {
+            segments.push_back(segment);
+        }
+
+        pos = next + 1;
+    }
+
+    // 7. Reconstruimos el path limpio
+    std::string clean_path = "/";
+    for (size_t i = 0; i < segments.size(); ++i) {
+        clean_path += segments[i];
+        if (i < segments.size() - 1 || !segments.empty()) {
+            clean_path += "/";
+        }
+    }
+    // Si solo queda /, lo dejamos como raíz
+    if (clean_path == "/") clean_path = "/";
+
+    // 8. Reconstruimos la URL completa
+    std::string normalized = scheme + authority + clean_path;
+
+    // 9. Aplicamos la limpieza final (minúsculas en host, quitar #, ordenar query, etc.)
+    return limpiarURLAbsoluta(normalized);
+}
+
+// Función auxiliar privada (puedes declararla en el .h como private o inline)
+std::string ProcesadorEnlaces::limpiarURLAbsoluta(std::string url) {
+    if (url.empty()) return "";
+
+    // a) Convertir esquema a minúsculas (http → HTTP no es común, pero por si acaso)
+    size_t scheme_end = url.find("://");
+    if (scheme_end != std::string::npos) {
+        std::transform(url.begin(), url.begin() + scheme_end,
+                       url.begin(), ::tolower);
+    }
+
+    // b) Quitar fragmento (#...)  →  casi siempre se ignora en crawlers
+    size_t fragment_pos = url.find('#');
+    if (fragment_pos != std::string::npos) {
+        url.erase(fragment_pos);
+    }
+
+
+    // c) Opcional: ordenar parámetros de query (muy recomendado para deduplicar)
+    size_t query_pos = url.find('?');
+    if (query_pos != std::string::npos) {
+        std::string path = url.substr(0, query_pos);
+        std::string query = url.substr(query_pos + 1);
+
+        // Separar parámetros
+        std::vector<std::string> params;
+        size_t last = 0;
+        size_t pos = query.find('&');
+        while (pos != std::string::npos) {
+            params.push_back(query.substr(last, pos - last));
+            last = pos + 1;
+            pos = query.find('&', last);
+        }
+        if (last < query.size()) {
+            params.push_back(query.substr(last));
+        }
+
+        // Ordenar alfabéticamente
+        std::sort(params.begin(), params.end());
+
+        // Reconstruir query
+        std::string new_query;
+        for (size_t i = 0; i < params.size(); ++i) {
+            if (!new_query.empty()) new_query += "&";
+            new_query += params[i];
+        }
+
+        url = path + "?" + new_query;
+    }
+
+    // f) Convertir host a minúsculas 
+    size_t host_start = url.find("://");
+    if (host_start != std::string::npos) {
+        host_start += 3;
+        size_t host_end = url.find('/', host_start);
+        if (host_end == std::string::npos) {
+            host_end = url.find('?', host_start);
+        }
+        if (host_end == std::string::npos) {
+            host_end = url.find('#', host_start);
+        }
+        if (host_end == std::string::npos) {
+            host_end = url.size();
+        }
+
+        std::string host = url.substr(host_start, host_end - host_start);
+        std::transform(host.begin(), host.end(), host.begin(), ::tolower);
+
+        // Reconstruir URL con host en minúsculas
+        url = url.substr(0, host_start) + host + url.substr(host_end);
+    }
+
+    return url;
+}
 
 bool ProcesadorEnlaces::esMismoDominio(const std::string& url) {
     try {
@@ -226,6 +364,10 @@ bool ProcesadorEnlaces::esEnlaceValido(const std::string& url) {
     if (url[0] == '#') {
         return false;
     }
+
+    if (url.find("${") != std::string::npos || url.find("<%") != std::string::npos) {
+    return false;  // plantilla no resuelta
+    }
     
     std::string minuscula = url;
     std::transform(minuscula.begin(), minuscula.end(), minuscula.begin(), ::tolower);
@@ -244,7 +386,8 @@ bool ProcesadorEnlaces::esRecursoEstatico(const std::string& url) {
     std::string minuscula = url;
     std::transform(minuscula.begin(), minuscula.end(), minuscula.begin(), ::tolower);
 
-    return minuscula.find(".css") != std::string::npos ||
+    return minuscula.find(".pdf") != std::string::npos ||
+           minuscula.find(".css") != std::string::npos ||
            minuscula.find(".js") != std::string::npos ||
            minuscula.find(".ico") != std::string::npos ||
            minuscula.find(".png") != std::string::npos ||
