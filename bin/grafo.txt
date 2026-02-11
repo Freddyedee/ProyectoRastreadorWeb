@@ -1,0 +1,80 @@
+GRAFO DE ENLACES - Total paginas: 20
+
+https://crawler-test.com/mobile/amp_with_no_mobile:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/amp_with_responsive:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/responsive_with_amp:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/amp_with_separate_mobile:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/other_desktop_that_links_to_the_same_mobile_pages:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/no_mobile_configuration:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/responsive:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/dynamic:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_mobile_with_mobile_not_subdomain:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/desktop_with_self_canonical_mobile_and_amp:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/no_mobile_with_amp:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop_with_mobile_not_subdomain:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop_with_different_links_out:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop_with_different_links_in:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop_with_different_wordcount:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop_with_different_title:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop_with_different_h1:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/desktop_with_AMP_as_mobile:
+  (sin enlaces salientes)
+
+https://crawler-test.com/mobile/separate_desktop:
+  (sin enlaces salientes)
+
+https://crawler-test.com/:
+  -> https://crawler-test.com/mobile/separate_desktop
+  -> https://crawler-test.com/mobile/desktop_with_AMP_as_mobile
+  -> https://crawler-test.com/mobile/separate_desktop_with_different_h1
+  -> https://crawler-test.com/mobile/separate_desktop_with_different_title
+  -> https://crawler-test.com/mobile/separate_desktop_with_different_wordcount
+  -> https://crawler-test.com/mobile/separate_desktop_with_different_links_in
+  -> https://crawler-test.com/mobile/separate_desktop_with_different_links_out
+  -> https://crawler-test.com/mobile/separate_desktop_with_mobile_not_subdomain
+  -> https://crawler-test.com/mobile/desktop_with_self_canonical_mobile_and_amp
+  -> https://crawler-test.com/mobile/separate_mobile_with_mobile_not_subdomain
+  -> https://crawler-test.com/mobile/dynamic
+  -> https://crawler-test.com/mobile/responsive
+  -> https://crawler-test.com/mobile/no_mobile_configuration
+  -> https://crawler-test.com/mobile/other_desktop_that_links_to_the_same_mobile_pages
+  -> https://crawler-test.com/mobile/amp_with_separate_mobile
+  -> https://crawler-test.com/mobile/responsive_with_amp
+  -> https://crawler-test.com/mobile/amp_with_responsive
+  -> https://crawler-test.com/mobile/no_mobile_with_amp
+  -> https://crawler-test.com/mobile/amp_with_no_mobile
+

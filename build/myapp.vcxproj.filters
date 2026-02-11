@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Rastreador.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\ComunicacionHTTP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\GrafoWeb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\ProcesadorEnlaces.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\WebCrawler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\BuscadorClave.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Negocio\src\AnalizadorGrafo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Datos\src\GestorArchivos.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\Presentacion\src\MenuConsola.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A63DFA0C-D5B3-33E2-BE00-A13680DB6DD3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

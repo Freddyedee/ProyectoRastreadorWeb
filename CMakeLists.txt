@@ -25,12 +25,13 @@ project(MyCurlProject VERSION 1.0 LANGUAGES CXX)
 # =============================================================================
 # Permite que CMake encuentre libcurl automáticamente
 
-set(CMAKE_TOOLCHAIN_FILE "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(CMAKE_TOOLCHAIN_FILE "C:/Users/usuario/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    CACHE STRING "Vcpkg toolchain file")
 
-find_package(CURL REQUIRED)
+find_package(CURL CONFIG REQUIRED)
 
 
-# =============================================================================
+# =============================================================================|
 # CONFIGURACIÓN DEL COMPILADOR Y ESTÁNDAR C++
 # =============================================================================
 
@@ -70,15 +71,21 @@ set(FILES_TO_CHECK
     # ========================
     # MÓDULO: Negocio
     # ========================
-    "pruebas.cpp"
+    "Rastreador.cpp"
+    "Negocio/src/ComunicacionHTTP.cpp"
+    "Negocio/src/GrafoWeb.cpp"
+    "Negocio/src/ProcesadorEnlaces.cpp"
     "Negocio/src/WebCrawler.cpp"
+    "Negocio/src/BuscadorClave.cpp"
+    "Negocio/src/AnalizadorGrafo.cpp"
+    "Datos/src/GestorArchivos.cpp"
     "Presentacion/src/MenuConsola.cpp"
 
 
     # ========================
     # MÓDULO: Presentación
     # ========================
-   
+    
 )
 
 
@@ -134,7 +141,7 @@ target_link_libraries(myapp PRIVATE CURL::libcurl)
 
 set_target_properties(myapp PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin
-    OUTPUT_NAME "MyCurlApp"
+    OUTPUT_NAME "Rastreador"
 )
 
 
@@ -142,13 +149,6 @@ set_target_properties(myapp PROPERTIES
 # OPCIONES DE COMPILACIÓN SEGÚN MODO
 # =============================================================================
 
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    target_compile_options(myapp PRIVATE -Wall -g -O0)
-    message(STATUS "Modo: Debug — depuración activa")
-else()
-    target_compile_options(myapp PRIVATE -O2)
-    message(STATUS "Modo: Release — optimización activada")
-endif()
 
 
 # =============================================================================

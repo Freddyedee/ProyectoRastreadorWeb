@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\usuario\Documents\COSAS UNI\proyectos\ED\PROYECTO 2\github\ProyectoRastreadorWeb\build\CMakeFiles\73355e8b1d1930694d9b8d543ef829b8\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{27421937-4B1C-361A-9431-F0971C041052}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

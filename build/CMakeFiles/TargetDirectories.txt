@@ -1,3 +1,3 @@
-C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles/myapp.dir
-C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles/edit_cache.dir
-C:/Users/USER/Desktop/proyectoEstructuraDatos/build/CMakeFiles/rebuild_cache.dir
+C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/CMakeFiles/myapp.dir
+C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/usuario/Documents/COSAS UNI/proyectos/ED/PROYECTO 2/github/ProyectoRastreadorWeb/build/CMakeFiles/ZERO_CHECK.dir
